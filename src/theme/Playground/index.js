@@ -32,17 +32,9 @@ function LivePreviewLoader() {
   return <div>Loading...</div>;
 }
 
-function ResultWithHeader() {
+function ResultWithHeader({ visible, setVisible }) {
   return (
     <>
-      <Header>
-        <Translate
-          id="theme.Playground.result"
-          description="The result label of the live codeblocks"
-        >
-          Result
-        </Translate>
-      </Header>
       {/* https://github.com/facebook/docusaurus/issues/5747 */}
       <div className={styles.playgroundPreview}>
         <BrowserOnly fallback={<LivePreviewLoader />}>
@@ -58,7 +50,7 @@ function ResultWithHeader() {
   );
 }
 
-function ThemedLiveEditor() {
+function ThemedLiveEditor({ visible }) {
   const isBrowser = useIsBrowser();
   return (
     <LiveEditor
@@ -66,15 +58,17 @@ function ThemedLiveEditor() {
       // otherwise dark prism theme is not applied
       key={isBrowser}
       className={styles.playgroundEditor}
+      style={visible ? { maxHeight: "600px" } : { maxHeight: 0 }}
     />
   );
 }
 
-function EditorWithHeader() {
-  const [visible, setVisible] = useState(false);
+function EditorWithHeader({ visible, setVisible }) {
   return (
     <>
+      <ThemedLiveEditor visible={visible} />
       <Header onClick={() => setVisible((visible) => !visible)}>
+        {visible ? "Hide " : "Show "}
         <Translate
           id="theme.Playground.liveEditor"
           description="The live editor label of the live codeblocks"
@@ -82,7 +76,6 @@ function EditorWithHeader() {
           Live Editor
         </Translate>
       </Header>
-      {visible && <ThemedLiveEditor />}
     </>
   );
 }
@@ -97,6 +90,7 @@ export default function Playground({ children, transformCode, ...props }) {
   } = useDocusaurusContext();
   const prismTheme = usePrismTheme();
 
+  const [visible, setVisible] = useState(false);
   return (
     <div className={styles.playgroundContainer}>
       <LiveProvider
@@ -105,17 +99,8 @@ export default function Playground({ children, transformCode, ...props }) {
         theme={prismTheme}
         {...props}
       >
-        {playgroundPosition === "top" ? (
-          <>
-            <ResultWithHeader />
-            <EditorWithHeader />
-          </>
-        ) : (
-          <>
-            <EditorWithHeader />
-            <ResultWithHeader />
-          </>
-        )}
+        <ResultWithHeader visible={visible} setVisible={setVisible} />
+        <EditorWithHeader visible={visible} setVisible={setVisible} />
       </LiveProvider>
     </div>
   );
