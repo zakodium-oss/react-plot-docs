@@ -14,7 +14,8 @@ import BrowserOnly from "@docusaurus/BrowserOnly";
 import usePrismTheme from "@theme/hooks/usePrismTheme";
 import styles from "./styles.module.css";
 import useIsBrowser from "@docusaurus/useIsBrowser";
-
+import { FiChevronRight } from "react-icons/fi";
+import "./styles.module.css";
 function Header({ onClick, children }) {
   return (
     <div
@@ -58,7 +59,7 @@ function ThemedLiveEditor({ visible }) {
       // otherwise dark prism theme is not applied
       key={isBrowser}
       className={styles.playgroundEditor}
-      style={visible ? { maxHeight: "600px" } : { maxHeight: 0 }}
+      style={visible ? { maxHeight: "1000px" } : { maxHeight: 0 }}
     />
   );
 }
@@ -66,7 +67,6 @@ function ThemedLiveEditor({ visible }) {
 function EditorWithHeader({ visible, setVisible }) {
   return (
     <>
-      <ThemedLiveEditor visible={visible} />
       <Header onClick={() => setVisible((visible) => !visible)}>
         {visible ? "Hide " : "Show "}
         <Translate
@@ -75,7 +75,13 @@ function EditorWithHeader({ visible, setVisible }) {
         >
           Live Editor
         </Translate>
+        <FiChevronRight
+          style={visible ? { transform: "rotate(90deg)" } : {}}
+          className={styles.headerChevron}
+          size="25"
+        />
       </Header>
+      <ThemedLiveEditor visible={visible} />
     </>
   );
 }

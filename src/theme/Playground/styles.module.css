@@ -9,21 +9,21 @@
   margin-bottom: var(--ifm-leading);
   border-radius: var(--ifm-global-radius);
   box-shadow: var(--ifm-global-shadow-lw);
+  background: var(--ifm-color-emphasis-600);
   overflow: hidden;
   border: 2px solid var(--ifm-color-emphasis-600);
 }
 
 .playgroundHeader {
+  display: flex;
+  position: relative;
   letter-spacing: 0.08rem;
   padding: 0.75rem;
   text-transform: uppercase;
   font-weight: bold;
-  background: var(--ifm-color-emphasis-600);
   color: var(--ifm-color-content-inverse);
   font-size: var(--ifm-code-font-size);
-  transition: max-height 1s ease-in-out;
-  text-align: right;
-  padding-right: 3rem;
+  padding-left: 2rem;
 }
 
 .playgroundEditor {
@@ -31,12 +31,16 @@
     var(--ifm-font-family-monospace) !important;
   /*rtl:ignore*/
   direction: ltr;
-  transition: max-height 1s ease-in-out;
+  transition: max-height 400ms ease-in-out;
   background: #e5feff;
   overflow: hidden;
-  border-top: 2px solid var(--ifm-color-emphasis-600);
 }
 .playgroundPreview {
   padding: 1.5rem;
   background-color: var(--ifm-pre-background);
+}
+.headerChevron {
+  transition: all 400ms ease-in-out;
+  margin-right: 20;
+  margin-left: auto;
 }
