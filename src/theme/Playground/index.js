@@ -5,17 +5,18 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import React, { useState } from "react";
+import * as React from "react";
+import { useState } from "react";
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from "react-live";
 import clsx from "clsx";
 import Translate from "@docusaurus/Translate";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import BrowserOnly from "@docusaurus/BrowserOnly";
-import usePrismTheme from "@theme/hooks/usePrismTheme";
+import { usePrismTheme } from "@docusaurus/theme-common";
 import styles from "./styles.module.css";
 import useIsBrowser from "@docusaurus/useIsBrowser";
 import { FiChevronRight } from "react-icons/fi";
-import "./styles.module.css";
+
 function Header({ onClick, children }) {
   return (
     <div
@@ -33,21 +34,18 @@ function LivePreviewLoader() {
   return <div>Loading...</div>;
 }
 
-function ResultWithHeader({ visible, setVisible }) {
+function ResultWithHeader() {
   return (
-    <>
-      {/* https://github.com/facebook/docusaurus/issues/5747 */}
-      <div className={styles.playgroundPreview}>
-        <BrowserOnly fallback={<LivePreviewLoader />}>
-          {() => (
-            <>
-              <LivePreview />
-              <LiveError />
-            </>
-          )}
-        </BrowserOnly>
-      </div>
-    </>
+    <div className={styles.playgroundPreview}>
+      <BrowserOnly fallback={<LivePreviewLoader />}>
+        {() => (
+          <>
+            <LivePreview />
+            <LiveError />
+          </>
+        )}
+      </BrowserOnly>
+    </div>
   );
 }
 
@@ -64,7 +62,8 @@ function ThemedLiveEditor({ visible }) {
   );
 }
 
-function EditorWithHeader({ visible, setVisible }) {
+function EditorWithHeader() {
+  const [visible, setVisible] = useState(false);
   return (
     <>
       <Header onClick={() => setVisible((visible) => !visible)}>
@@ -96,7 +95,6 @@ export default function Playground({ children, transformCode, ...props }) {
   } = useDocusaurusContext();
   const prismTheme = usePrismTheme();
 
-  const [visible, setVisible] = useState(false);
   return (
     <div className={styles.playgroundContainer}>
       <LiveProvider
@@ -105,8 +103,8 @@ export default function Playground({ children, transformCode, ...props }) {
         theme={prismTheme}
         {...props}
       >
-        <ResultWithHeader visible={visible} setVisible={setVisible} />
-        <EditorWithHeader visible={visible} setVisible={setVisible} />
+        <ResultWithHeader />
+        <EditorWithHeader />
       </LiveProvider>
     </div>
   );
