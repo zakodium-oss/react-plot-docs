@@ -4,7 +4,7 @@
 
 To benefit of those features the hooks have to be wrapped in a `PlotController`. Some hooks like `useRectangularZoom` will apply by default to all the `Plot` components contained in the `PlotController`. In the same page there may be many `Plot` components group in different `PlotController` components.
 
-## userStartMoveEnd
+## useStartMoveEnd
 
 The low level hook `useStartMoveEnd` allows to track the mouse. This hook is used by other hooks but can also be used natively.
 
