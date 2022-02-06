@@ -57,9 +57,15 @@ render(
 
 ## useDrawRectangle
 
+A more advanced hook will not only monitor the movement of the mouse but will also return `annotations` that can directly be drawn in the `Plot`.
+
+- wrap your plot component in `<PlotController>`
+- add the hook: `const drawRectangle = useDrawRectangle();`
+- add the `drawRectangle.annotations` in order to draw the zoom rectangle: `<Annotations>{drawRectangle.annotations}</Annotations>`
+
 ```jsx live noInline={true}
 function DrawRectanglePlot() {
-  const zoom = useDrawRectangle();
+  const drawRectangle = useDrawRectangle();
   return (
     <Plot width={300} height={300}>
       <LineSeries
@@ -71,7 +77,7 @@ function DrawRectanglePlot() {
           { x: 5, y: 1 },
         ]}
       />
-      <Annotations>{zoom.annotations}</Annotations>
+      <Annotations>{drawRectangle.annotations}</Annotations>
     </Plot>
   );
 }
@@ -84,6 +90,12 @@ render(
 ```
 
 ## useRectangularZoom
+
+This hook allows directly to manage the zoom in a plot. There are 3 steps in order ot implement the zoom:
+
+- wrap your plot component in `<PlotController>`
+- add the hook: `const zoom = useRectangularZoom();`
+- add the `zoom.annotations` in order to draw the zoom rectangle: `<Annotations>{zoom.annotations}</Annotations>`
 
 ```jsx live noInline={true}
 function ZoomablePlot() {
