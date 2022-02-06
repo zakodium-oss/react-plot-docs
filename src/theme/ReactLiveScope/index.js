@@ -7,6 +7,7 @@
 
 import React from "react";
 import * as ReactPlot from "react-plot";
+import { ObjectInspector } from "react-inspector";
 
 const ButtonExample = (props) => (
   <button
@@ -27,6 +28,7 @@ const ReactLiveScope = {
   ...React,
   ButtonExample,
   ...ReactPlot,
+  ObjectInspector,
 };
 
 export default ReactLiveScope;
