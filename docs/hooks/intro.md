@@ -97,6 +97,8 @@ This hook allows directly to manage the zoom in a plot. There are 3 steps in ord
 - add the hook: `const zoom = useRectangularZoom();`
 - add the `zoom.annotations` in order to draw the zoom rectangle: `<Annotations>{zoom.annotations}</Annotations>`
 
+This hook also implements the `double click` detection to reset the zoom to its original value.
+
 ```jsx live noInline={true}
 function ZoomablePlot() {
   const zoom = useRectangularZoom();
