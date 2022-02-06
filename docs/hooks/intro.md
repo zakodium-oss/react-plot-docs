@@ -2,19 +2,36 @@
 
 `react-plot` provides hook that allows to add functionalities to the plot.
 
-To benefit of those features the hooks have to be wrapped in a `PlotController`.
+To benefit of those features the hooks have to be wrapped in a `PlotController`. Some hooks like `useRectangularZoom` will apply by default to all the `Plot` components contained in the `PlotController`. In the same page there may be many `Plot` components group in different `PlotController` components.
 
-```jsx live
-function Demo() {
+## userStartMoveEnd
+
+The low level hook `useStartMoveEnd` allows to track the mouse. This hook is used by other hooks but can also be used natively.
+
+If accepts 3 callbacks:
+
+- onStart: the mouse was clicked
+- onMove: the mouse was dragged
+- onEnd: the mouse was released
+
+In the following example we simply log the different events.
+
+```jsx live noInline={true}
+function TrackablePlot() {
+  const [currentEvent, setCurrentEvent] = useState();
+  const tracker = useStartMoveEnd({
+    onStart: (event) => {
+      setCurrentEvent({ kind: "onStart", event });
+    },
+    onMove: (event) => {
+      setCurrentEvent({ kind: "onMove", event });
+    },
+    onEnd: (event) => {
+      setCurrentEvent({ kind: "onEnd", event });
+    },
+  });
   return (
-    <PlotController>
-      <Zoomable />
-    </PlotController>
-  );
-
-  function Zoomable() {
-    const zoom = useRectangularZoom();
-    return (
+    <div style={{ display: "flex" }}>
       <Plot width={300} height={300}>
         <LineSeries
           data={[
@@ -25,108 +42,98 @@ function Demo() {
             { x: 5, y: 1 },
           ]}
         />
-        <Annotations>{zoom.annotations}</Annotations>
       </Plot>
-    );
-  }
+      <ObjectInspector data={currentEvent} />
+    </div>
+  );
 }
+
+render(
+  <PlotController>
+    <TrackablePlot />
+  </PlotController>
+);
 ```
 
-```jsx live
-function Demo() {
-  const [currentEvent, setCurrentEvent] = useState(undefined);
+## useDrawRectangle
 
+```jsx live noInline={true}
+function DrawRectanglePlot() {
+  const zoom = useDrawRectangle();
   return (
-    <PlotController>
-      <Tracking />
-      <EventInfo />
-    </PlotController>
+    <Plot width={300} height={300}>
+      <LineSeries
+        data={[
+          { x: 1, y: 1 },
+          { x: 2, y: 2 },
+          { x: 3, y: 3 },
+          { x: 4, y: 2 },
+          { x: 5, y: 1 },
+        ]}
+      />
+      <Annotations>{zoom.annotations}</Annotations>
+    </Plot>
   );
-
-  function EventInfo() {
-    return (
-      <>
-        {currentEvent && (
-          <div>
-            Current event: {currentEvent.kind} - Coordinates:{" "}
-            {currentEvent.event.coordinates.x.toFixed(2)} -{" "}
-            {currentEvent.event.coordinates.y.toFixed(2)}{" "}
-          </div>
-        )}
-      </>
-    );
-  }
-
-  function Tracking() {
-    const tracker = useStartMoveEnd({
-      onStart: (event) => {
-        setCurrentEvent({ kind: "onStart", event });
-      },
-      onMove: (event) => {
-        setCurrentEvent({ kind: "onMove", event });
-      },
-      onEnd: (event) => {
-        setCurrentEvent({ kind: "onEnd", event });
-      },
-    });
-    return (
-      <Plot width={300} height={300}>
-        <LineSeries
-          data={[
-            { x: 1, y: 1 },
-            { x: 2, y: 2 },
-            { x: 3, y: 3 },
-            { x: 4, y: 2 },
-            { x: 5, y: 1 },
-          ]}
-        />
-      </Plot>
-    );
-  }
 }
+
+render(
+  <PlotController>
+    <DrawRectanglePlot />
+  </PlotController>
+);
+```
+
+## useRectangularZoom
+
+```jsx live noInline={true}
+function ZoomablePlot() {
+  const zoom = useRectangularZoom();
+  return (
+    <Plot width={300} height={300}>
+      <LineSeries
+        data={[
+          { x: 1, y: 1 },
+          { x: 2, y: 2 },
+          { x: 3, y: 3 },
+          { x: 4, y: 2 },
+          { x: 5, y: 1 },
+        ]}
+      />
+      <Annotations>{zoom.annotations}</Annotations>
+    </Plot>
+  );
+}
+render(
+  <PlotController>
+    <ZoomablePlot />
+  </PlotController>
+);
 ```
 
 If a `PlotController` contains many `Plot` the change will be applied on all of them.
 
-```jsx live
-function Demo() {
+```jsx live noInline={true}
+function ZoomablePlot() {
+  const zoom = useRectangularZoom();
   return (
-    <PlotController>
-      <Zoomable />
-      <Zoomable />
-    </PlotController>
+    <Plot width={300} height={300}>
+      <LineSeries
+        data={[
+          { x: 1, y: 1 },
+          { x: 2, y: 2 },
+          { x: 3, y: 3 },
+          { x: 4, y: 2 },
+          { x: 5, y: 1 },
+        ]}
+      />
+      <Annotations>{zoom.annotations}</Annotations>
+    </Plot>
   );
-
-  function Zoomable() {
-    const zoom = useRectangularZoom();
-    return (
-      <div>
-        <Plot width={300} height={300}>
-          <LineSeries
-            data={[
-              { x: 1, y: 1 },
-              { x: 2, y: 2 },
-              { x: 3, y: 3 },
-              { x: 4, y: 2 },
-              { x: 5, y: 1 },
-            ]}
-          />
-          <Annotations>{zoom.annotations}</Annotations>
-        </Plot>
-        <Plot width={300} height={300}>
-          <LineSeries
-            data={[
-              { x: 1, y: 3 },
-              { x: 2, y: 2 },
-              { x: 3, y: 1 },
-              { x: 4, y: 2 },
-              { x: 5, y: 3 },
-            ]}
-          />
-          <Annotations>{zoom.annotations}</Annotations>
-        </Plot>
-      </div>
-    );
-  }
 }
+render(
+  <PlotController>
+    <ZoomablePlot />
+    <ZoomablePlot />
+  </PlotController>
+);
 ```
