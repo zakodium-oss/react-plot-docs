@@ -14,7 +14,6 @@ function () {
     const data = xyToXYObject(
       convertJcamp(jcamp).flatten[0].spectra[0].data
     );
-    console.log(data)
     setData(data);
   }, []);
 
@@ -54,7 +53,6 @@ function () {
     const data = xyToXYObject(
       convertJcamp(jcamp).flatten[0].spectra[0].data
     );
-    console.log(data)
     setData(data);
   }, []);
 
