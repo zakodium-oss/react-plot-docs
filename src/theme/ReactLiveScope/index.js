@@ -9,6 +9,7 @@ import React from "react";
 import * as ReactPlot from "react-plot";
 import { ObjectInspector } from "react-inspector";
 import { xyToXYObject } from "ml-spectra-processing";
+import { parseXY } from "xy-parser";
 import ExecutionEnvironment from "@docusaurus/ExecutionEnvironment";
 
 const ButtonExample = (props) => (
@@ -36,6 +37,7 @@ const ReactLiveScope = {
   ...ReactPlot,
   ObjectInspector,
   xyToXYObject,
+  parseXY,
   convertJcamp: convertJcamp(),
 };
 
