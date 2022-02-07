@@ -1,4 +1,4 @@
-# NMR specta
+# NMR spectra
 
 Example of code loading and converting a jcamp (using `jcampconverter`)
 

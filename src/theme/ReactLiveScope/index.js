@@ -8,6 +8,8 @@
 import React from "react";
 import * as ReactPlot from "react-plot";
 import { ObjectInspector } from "react-inspector";
+import { convert as convertJcamp } from "jcampconverter";
+import { xyToXYObject } from "ml-spectra-processing";
 
 const ButtonExample = (props) => (
   <button
@@ -29,6 +31,8 @@ const ReactLiveScope = {
   ButtonExample,
   ...ReactPlot,
   ObjectInspector,
+  xyToXYObject,
+  convertJcamp,
 };
 
 export default ReactLiveScope;
