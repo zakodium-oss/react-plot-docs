@@ -8,8 +8,8 @@
 import React from "react";
 import * as ReactPlot from "react-plot";
 import { ObjectInspector } from "react-inspector";
-import { convert as convertJcamp } from "jcampconverter";
 import { xyToXYObject } from "ml-spectra-processing";
+import BrowserOnly from "@docusaurus/BrowserOnly";
 
 const ButtonExample = (props) => (
   <button
@@ -24,7 +24,15 @@ const ButtonExample = (props) => (
     }}
   />
 );
-
+function convertJcamp() {
+  return (
+    <BrowserOnly fallback={<div>...</div>}>
+      {() => {
+        return require("jcampconverter")[convert];
+      }}
+    </BrowserOnly>
+  );
+}
 const ReactLiveScope = {
   React,
   ...React,
@@ -32,7 +40,7 @@ const ReactLiveScope = {
   ...ReactPlot,
   ObjectInspector,
   xyToXYObject,
-  convertJcamp,
+  convertJcamp: convertJcamp(),
 };
 
 export default ReactLiveScope;
