@@ -151,3 +151,38 @@ render(
   </PlotController>
 );
 ```
+
+## useAxisZoom
+
+This hook allows to zoom in a plot along the specified axis (default to horitzontal). There are 3 steps in order ot implement the zoom:
+
+- wrap your plot component in `<PlotController>`
+- add the hook: `const zoom = useAxisZoom({direction:'horizontal'});`
+- add the `zoom.annotations` in order to draw the zoom rectangle: `<Annotations>{zoom.annotations}</Annotations>`
+
+This hook also implements the `double click` detection to reset the zoom to its original value.
+
+```jsx live noInline={true}
+function ZoomablePlot() {
+  const zoom = useAxisZoom();
+  return (
+    <Plot width={300} height={300}>
+      <LineSeries
+        data={[
+          { x: 1, y: 1 },
+          { x: 2, y: 2 },
+          { x: 3, y: 3 },
+          { x: 4, y: 2 },
+          { x: 5, y: 1 },
+        ]}
+      />
+      <Annotations>{zoom.annotations}</Annotations>
+    </Plot>
+  );
+}
+render(
+  <PlotController>
+    <ZoomablePlot />
+  </PlotController>
+);
+```

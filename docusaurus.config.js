@@ -15,7 +15,18 @@ const config = {
   favicon: "img/favicon.ico",
   organizationName: "zakodium", // Usually your GitHub org/user name.
   projectName: "react-plot", // Usually your repo name.
-
+  plugins: [
+    [
+      require.resolve("@easyops-cn/docusaurus-search-local"),
+      {
+        // ... Your options.
+        // `hashed` is recommended as long-term-cache of index file is possible.
+        hashed: true,
+        docsRouteBasePath: "/eln",
+        indexPages: true, //because of bug: https://github.com/easyops-cn/docusaurus-search-local/issues/42
+      },
+    ],
+  ],
   presets: [
     [
       "classic",
@@ -25,7 +36,16 @@ const config = {
           routeBasePath: "/",
           sidebarPath: require.resolve("./sidebars.js"),
           editUrl: "https://github.com/zakodium/react-plot-docs/tree/main/",
+          sidebarItemsGenerator: async function ({
+            defaultSidebarItemsGenerator,
+            ...args
+          }) {
+            let sidebarItems = await defaultSidebarItemsGenerator(args);
+            sidebarItems = filterItems(sidebarItems);
+            return raisingSingleNodes(sidebarItems);
+          },
         },
+
         blog: false,
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
@@ -38,9 +58,9 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: "My Site",
+        title: "React Plot",
         logo: {
-          alt: "My Site Logo",
+          alt: "Zakodium Logo",
           src: "img/logo.svg",
         },
         items: [
@@ -97,5 +117,36 @@ const config = {
     }),
   themes: ["@docusaurus/theme-live-codeblock"],
 };
+
+const ignoredLabels = ["includes"];
+
+function filterItems(items) {
+  items = items.filter((item) => !ignoredLabels.includes(item.label));
+
+  items.forEach((item) => {
+    if (Array.isArray(item.items)) {
+      item.items = filterItems(item.items);
+    }
+  });
+  return items;
+}
+
+function raisingSingleNodes(items) {
+  // we need to traverse the full hierarhy and if there is only one child items we raise it one level
+  for (let parentItem of items) {
+    if (parentItem && parentItem.items && parentItem.items.length) {
+      for (let j = 0; j < parentItem.items.length; j++) {
+        if (
+          parentItem.items[j].items &&
+          parentItem.items[j].items.length === 1
+        ) {
+          parentItem.items[j] = parentItem.items[j].items[0];
+        }
+      }
+      raisingSingleNodes(parentItem.items);
+    }
+  }
+  return items;
+}
 
 module.exports = config;
