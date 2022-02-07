@@ -9,7 +9,7 @@ import React from "react";
 import * as ReactPlot from "react-plot";
 import { ObjectInspector } from "react-inspector";
 import { xyToXYObject } from "ml-spectra-processing";
-import BrowserOnly from "@docusaurus/BrowserOnly";
+import ExecutionEnvironment from "@docusaurus/ExecutionEnvironment";
 
 const ButtonExample = (props) => (
   <button
@@ -25,13 +25,9 @@ const ButtonExample = (props) => (
   />
 );
 function convertJcamp() {
-  return (
-    <BrowserOnly fallback={<div>...</div>}>
-      {() => {
-        return require("jcampconverter")[convert];
-      }}
-    </BrowserOnly>
-  );
+  if (ExecutionEnvironment.canUseDOM) {
+    return require("jcampconverter").convert;
+  }
 }
 const ReactLiveScope = {
   React,
