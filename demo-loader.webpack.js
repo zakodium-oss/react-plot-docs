@@ -1,0 +1,130 @@
+const pkg = require('./package.json');
+const changeCase = require('change-case');
+const babel = require('@babel/core');
+const parser = require('@babel/parser');
+const transformTypeScript = require('@babel/plugin-transform-typescript');
+
+module.exports = function exampleLoader(source) {
+  const callback = this.async();
+  const parsed = parser.parse(source, {
+    sourceType: 'module',
+    plugins: ['typescript', 'jsx'],
+  });
+
+  const parsedAll = parsed.program.body;
+  const defaultExportIndex = parsedAll.findIndex(
+    (node) => node.type === 'ExportDefaultDeclaration',
+  );
+  const parsedBeforeDefaultExport = parsedAll.slice(0, parsedAll.length - 1);
+  const parsedImports = parsedBeforeDefaultExport.filter(
+    (statement) => statement.type === 'ImportDeclaration',
+  );
+  const defaultExport = parsedAll[defaultExportIndex];
+  const defaultDeclaration = defaultExport.declaration;
+
+  if (
+    !defaultDeclaration ||
+    defaultDeclaration.type !== 'FunctionDeclaration' ||
+    defaultExportIndex !== parsedAll.length - 1
+  ) {
+    throw new Error(
+      `
+example should start with import statements and end with default export of function declaration.
+Example:
+  // import statements
+  import React from 'react';
+  import Plot from 'react-plot';
+      
+  // Default export of function declaration
+  export default function Example(){};
+      `,
+    );
+  }
+
+  const codeSandboxDependencies = parsedImports.reduce((prev, current) => {
+    const source = current.source.value;
+    if (source.startsWith('.')) {
+      console.warn(
+        'import statements with relative path will not work in code sandbox',
+      );
+    } else {
+      prev[source] = pkg.dependencies[source];
+    }
+    return prev;
+  }, {});
+
+  const functionComponentSource = source.slice(defaultDeclaration.start);
+  const importSource = source.slice(0, defaultExport.start);
+  const name = changeCase.paramCase(
+    defaultDeclaration.id?.name || 'ReactPlotDemo',
+  );
+
+  const modifiedSource = `
+  ${importSource}
+  import { useState as __useState__ } from 'react';
+  import CodeBlock from '@theme/CodeBlock';
+  import CodeSandboxer from 'react-codesandboxer';
+  
+  const exampleSource = ${JSON.stringify(source)};
+  const __EXAMPLE__ = ${functionComponentSource}
+
+  export default function __EXAMPLE_DEMO__() {
+    const [showCode, setShowCode] = __useState__(false);
+    return (
+      <>
+        <div className="demo-example-wrapper">
+          <__EXAMPLE__ />
+          <div className="demo-example-buttons">
+            <button
+              onClick={() => setShowCode((show) => !show)}
+              type="button"
+              style={{
+                backgroundColor: showCode ? '#dbeafe' : undefined,
+              }}
+            >
+              Code
+            </button>
+            <CodeSandboxer
+              examplePath="examples/file.js"
+              name="${name}"
+              example={exampleSource}
+              dependencies={${JSON.stringify(codeSandboxDependencies)}}
+              afterDeployError={(error) => {
+                console.error('deploy error');
+                console.error(error)
+              }}
+            >
+              {() => {
+                return <button type="submit">Open sandbox</button>;
+              }}
+            </CodeSandboxer>
+          </div>
+        </div>
+        {showCode && (
+          <CodeBlock className="language-jsx">{exampleSource}</CodeBlock>
+        )}
+      </>
+    );
+  }
+  `;
+  babel
+    .transformAsync(modifiedSource, {
+      filename: 'Demo.tsx',
+      plugins: [
+        [
+          transformTypeScript,
+          {
+            allowDeclareFields: false,
+            allowNamespaces: false,
+            isTSX: true,
+            jsxPragma: false,
+            onlyRemoveTypeImports: true,
+          },
+        ],
+      ],
+    })
+    .then((result) => {
+      callback(null, result.code);
+    })
+    .catch((e) => callback(e));
+};

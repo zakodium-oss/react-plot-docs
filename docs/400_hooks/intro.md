@@ -1,3 +1,5 @@
+import UseStartMoveEndDemo from './UseStartMoveEnd.demo.tsx';
+
 # Hooks
 
 `react-plot` provides hook that allows to add functionalities to the plot.
@@ -16,44 +18,7 @@ If accepts 3 callbacks:
 
 In the following example we simply log the different events.
 
-```jsx live noInline={true}
-function TrackablePlot() {
-  const [currentEvent, setCurrentEvent] = useState();
-  const tracker = useStartMoveEnd({
-    onStart: (event) => {
-      setCurrentEvent({ kind: "onStart", event });
-    },
-    onMove: (event) => {
-      setCurrentEvent({ kind: "onMove", event });
-    },
-    onEnd: (event) => {
-      setCurrentEvent({ kind: "onEnd", event });
-    },
-  });
-  return (
-    <div style={{ display: "flex" }}>
-      <Plot width={300} height={300}>
-        <LineSeries
-          data={[
-            { x: 1, y: 1 },
-            { x: 2, y: 2 },
-            { x: 3, y: 3 },
-            { x: 4, y: 2 },
-            { x: 5, y: 1 },
-          ]}
-        />
-      </Plot>
-      <ObjectInspector data={currentEvent} />
-    </div>
-  );
-}
-
-render(
-  <PlotController>
-    <TrackablePlot />
-  </PlotController>
-);
-```
+<UseStartMoveEndDemo />
 
 ## useDrawRectangle
 
@@ -85,7 +50,7 @@ function DrawRectanglePlot() {
 render(
   <PlotController>
     <DrawRectanglePlot />
-  </PlotController>
+  </PlotController>,
 );
 ```
 
@@ -120,7 +85,7 @@ function ZoomablePlot() {
 render(
   <PlotController>
     <ZoomablePlot />
-  </PlotController>
+  </PlotController>,
 );
 ```
 
@@ -148,7 +113,7 @@ render(
   <PlotController>
     <ZoomablePlot />
     <ZoomablePlot />
-  </PlotController>
+  </PlotController>,
 );
 ```
 
@@ -183,6 +148,6 @@ function ZoomablePlot() {
 render(
   <PlotController>
     <ZoomablePlot />
-  </PlotController>
+  </PlotController>,
 );
 ```

@@ -5,29 +5,29 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import React from "react";
-import * as ReactPlot from "react-plot";
-import { ObjectInspector } from "react-inspector";
-import { xyToXYObject } from "ml-spectra-processing";
-import { parseXY } from "xy-parser";
-import ExecutionEnvironment from "@docusaurus/ExecutionEnvironment";
+import React from 'react';
+import * as ReactPlot from 'react-plot';
+import { ObjectInspector } from 'react-inspector';
+import { xyToXYObject } from 'ml-spectra-processing';
+import { parseXY } from 'xy-parser';
+import ExecutionEnvironment from '@docusaurus/ExecutionEnvironment';
 
 const ButtonExample = (props) => (
   <button
     {...props}
     style={{
-      backgroundColor: "white",
-      border: "solid red",
+      backgroundColor: 'white',
+      border: 'solid red',
       borderRadius: 20,
       padding: 10,
-      cursor: "pointer",
+      cursor: 'pointer',
       ...props.style,
     }}
   />
 );
 function convertJcamp() {
   if (ExecutionEnvironment.canUseDOM) {
-    return require("jcampconverter").convert;
+    return require('jcampconverter').convert;
   }
 }
 const ReactLiveScope = {
