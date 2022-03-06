@@ -1,5 +1,5 @@
 ---
-## slug: /
+slug: /
 ---
 
 import DrainVoltage from './DrainVoltage.demo.tsx';
