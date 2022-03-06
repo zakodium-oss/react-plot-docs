@@ -1,5 +1,6 @@
 import React from 'react';
 import { Axis, LineSeries, Plot } from 'react-plot';
+
 export default function DrainVoltage() {
   return (
     <Plot width={300} height={300}>

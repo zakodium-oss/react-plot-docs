@@ -1,3 +1,4 @@
+const path = require('path');
 const pkg = require('./package.json');
 const changeCase = require('change-case');
 const babel = require('@babel/core');
@@ -64,7 +65,10 @@ Example:
   ${beforeDefaultExportSource}
   import { useState as __useState__ } from 'react';
   import CodeBlock from '@theme/CodeBlock';
-  import CodeSandboxer from 'react-codesandboxer';
+  import CodeSandboxer from '${path.relative(
+    this.context,
+    'src/components/CodeSandboxer.tsx',
+  )}';
   
   const exampleSource = ${JSON.stringify(source)};
   const __EXAMPLE__ = ${functionComponentSource}
@@ -86,14 +90,9 @@ Example:
               Code
             </button>
             <CodeSandboxer
-              examplePath="examples/file.js"
               name="${name}"
-              example={exampleSource}
+              source={exampleSource}
               dependencies={${JSON.stringify(codeSandboxDependencies)}}
-              afterDeployError={(error) => {
-                console.error('deploy error');
-                console.error(error)
-              }}
             >
               {() => {
                 return <button type="submit">Open sandbox</button>;
