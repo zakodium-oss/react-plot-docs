@@ -1,4 +1,8 @@
 import UseStartMoveEndDemo from './UseStartMoveEnd.demo.tsx';
+import UseDrawRectangleDemo from './UseDrawRectangle.demo.tsx';
+import UseRectangularZoomDemo from './UseRectangularZoom.demo.tsx';
+import MultiRectangularZoom from './MultiRectangularZoom.demo.tsx';
+import UseAxisZoom from './UseAxisZoom.demo.tsx';
 
 # Hooks
 
@@ -28,31 +32,7 @@ A more advanced hook will not only monitor the movement of the mouse but will al
 - add the hook: `const drawRectangle = useDrawRectangle();`
 - add the `drawRectangle.annotations` in order to draw the zoom rectangle: `<Annotations>{drawRectangle.annotations}</Annotations>`
 
-```jsx live noInline={true}
-function DrawRectanglePlot() {
-  const drawRectangle = useDrawRectangle();
-  return (
-    <Plot width={300} height={300}>
-      <LineSeries
-        data={[
-          { x: 1, y: 1 },
-          { x: 2, y: 2 },
-          { x: 3, y: 3 },
-          { x: 4, y: 2 },
-          { x: 5, y: 1 },
-        ]}
-      />
-      <Annotations>{drawRectangle.annotations}</Annotations>
-    </Plot>
-  );
-}
-
-render(
-  <PlotController>
-    <DrawRectanglePlot />
-  </PlotController>,
-);
-```
+<UseDrawRectangleDemo />
 
 ## useRectangularZoom
 
@@ -64,58 +44,11 @@ This hook allows directly to manage the zoom in a plot. There are 3 steps in ord
 
 This hook also implements the `double click` detection to reset the zoom to its original value.
 
-```jsx live noInline={true}
-function ZoomablePlot() {
-  const zoom = useRectangularZoom();
-  return (
-    <Plot width={300} height={300}>
-      <LineSeries
-        data={[
-          { x: 1, y: 1 },
-          { x: 2, y: 2 },
-          { x: 3, y: 3 },
-          { x: 4, y: 2 },
-          { x: 5, y: 1 },
-        ]}
-      />
-      <Annotations>{zoom.annotations}</Annotations>
-    </Plot>
-  );
-}
-render(
-  <PlotController>
-    <ZoomablePlot />
-  </PlotController>,
-);
-```
+<UseRectangularZoomDemo />
 
 If a `PlotController` contains many `Plot` the change will be applied on all of them.
 
-```jsx live noInline={true}
-function ZoomablePlot() {
-  const zoom = useRectangularZoom();
-  return (
-    <Plot width={300} height={300}>
-      <LineSeries
-        data={[
-          { x: 1, y: 1 },
-          { x: 2, y: 2 },
-          { x: 3, y: 3 },
-          { x: 4, y: 2 },
-          { x: 5, y: 1 },
-        ]}
-      />
-      <Annotations>{zoom.annotations}</Annotations>
-    </Plot>
-  );
-}
-render(
-  <PlotController>
-    <ZoomablePlot />
-    <ZoomablePlot />
-  </PlotController>,
-);
-```
+<MultiRectangularZoom />
 
 ## useAxisZoom
 
@@ -127,27 +60,4 @@ This hook allows to zoom in a plot along the specified axis (default to horitzon
 
 This hook also implements the `double click` detection to reset the zoom to its original value.
 
-```jsx live noInline={true}
-function ZoomablePlot() {
-  const zoom = useAxisZoom();
-  return (
-    <Plot width={300} height={300}>
-      <LineSeries
-        data={[
-          { x: 1, y: 1 },
-          { x: 2, y: 2 },
-          { x: 3, y: 3 },
-          { x: 4, y: 2 },
-          { x: 5, y: 1 },
-        ]}
-      />
-      <Annotations>{zoom.annotations}</Annotations>
-    </Plot>
-  );
-}
-render(
-  <PlotController>
-    <ZoomablePlot />
-  </PlotController>,
-);
-```
+<UseAxisZoom />
