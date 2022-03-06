@@ -2,7 +2,6 @@ const pkg = require('./package.json');
 const changeCase = require('change-case');
 const babel = require('@babel/core');
 const parser = require('@babel/parser');
-const transformTypeScript = require('@babel/plugin-transform-typescript');
 
 module.exports = function exampleLoader(source) {
   const callback = this.async();
@@ -12,24 +11,22 @@ module.exports = function exampleLoader(source) {
   });
 
   const parsedAll = parsed.program.body;
-  const defaultExportIndex = parsedAll.findIndex(
+  const defaultExport = parsedAll.find(
     (node) => node.type === 'ExportDefaultDeclaration',
   );
   const parsedBeforeDefaultExport = parsedAll.slice(0, parsedAll.length - 1);
   const parsedImports = parsedBeforeDefaultExport.filter(
     (statement) => statement.type === 'ImportDeclaration',
   );
-  const defaultExport = parsedAll[defaultExportIndex];
   const defaultDeclaration = defaultExport.declaration;
 
   if (
     !defaultDeclaration ||
-    defaultDeclaration.type !== 'FunctionDeclaration' ||
-    defaultExportIndex !== parsedAll.length - 1
+    defaultDeclaration.type !== 'FunctionDeclaration'
   ) {
     throw new Error(
       `
-example should start with import statements and end with default export of function declaration.
+example should have a default export of function declaration.
 Example:
   // import statements
   import React from 'react';
@@ -53,14 +50,18 @@ Example:
     return prev;
   }, {});
 
-  const functionComponentSource = source.slice(defaultDeclaration.start);
-  const importSource = source.slice(0, defaultExport.start);
+  const functionComponentSource = source.slice(
+    defaultDeclaration.start,
+    defaultDeclaration.end,
+  );
+  const beforeDefaultExportSource = source.slice(0, defaultExport.start);
+  const afterDefaultExportSource = source.slice(defaultExport.end);
   const name = changeCase.paramCase(
     defaultDeclaration.id?.name || 'ReactPlotDemo',
   );
 
   const modifiedSource = `
-  ${importSource}
+  ${beforeDefaultExportSource}
   import { useState as __useState__ } from 'react';
   import CodeBlock from '@theme/CodeBlock';
   import CodeSandboxer from 'react-codesandboxer';
@@ -106,22 +107,16 @@ Example:
       </>
     );
   }
+  ${afterDefaultExportSource}
   `;
+  if (afterDefaultExportSource.trim().length > 0) {
+    console.log(this.resourcePath);
+    console.log(modifiedSource);
+  }
   babel
     .transformAsync(modifiedSource, {
-      filename: 'Demo.tsx',
-      plugins: [
-        [
-          transformTypeScript,
-          {
-            allowDeclareFields: false,
-            allowNamespaces: false,
-            isTSX: true,
-            jsxPragma: false,
-            onlyRemoveTypeImports: true,
-          },
-        ],
-      ],
+      filename: this.resourcePath,
+      presets: ['@babel/preset-typescript'],
     })
     .then((result) => {
       callback(null, result.code);

@@ -4,6 +4,7 @@
   border-radius: 8px;
   margin-bottom: 12px;
   border: solid 2px #3b82f6;
+  overflow: auto;
 }
 
 .demo-example-buttons {
