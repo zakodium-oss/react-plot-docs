@@ -10,8 +10,10 @@ import * as ReactDOM from 'react-dom';
 import App from './Example';
 
 ReactDOM.render(
-<App />,
-document.getElementById('root')
+  <div style={{padding: '12px'}}>
+    <App />
+  </div>,
+  document.getElementById('root')
 );
 `;
 

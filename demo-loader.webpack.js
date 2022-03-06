@@ -4,7 +4,7 @@ const changeCase = require('change-case');
 const babel = require('@babel/core');
 const parser = require('@babel/parser');
 
-module.exports = function exampleLoader(source) {
+module.exports = function demoLoader(source) {
   const callback = this.async();
   const parsed = parser.parse(source, {
     sourceType: 'module',
@@ -43,7 +43,7 @@ Example:
     const source = current.source.value;
     if (source.startsWith('.')) {
       console.warn(
-        'import statements with relative path will not work in code sandbox',
+        `in ${this.resourcePath}, import statements with relative path will not work in code sandbox`,
       );
     } else {
       prev[source] = pkg.dependencies[source];
