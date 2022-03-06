@@ -140,7 +140,6 @@ const config = {
         darkTheme: darkCodeTheme,
       },
     }),
-  themes: ['@docusaurus/theme-live-codeblock'],
 };
 
 const ignoredLabels = ['includes'];

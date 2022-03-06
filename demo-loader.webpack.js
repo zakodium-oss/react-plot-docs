@@ -109,10 +109,6 @@ Example:
   }
   ${afterDefaultExportSource}
   `;
-  if (afterDefaultExportSource.trim().length > 0) {
-    console.log(this.resourcePath);
-    console.log(modifiedSource);
-  }
   babel
     .transformAsync(modifiedSource, {
       filename: this.resourcePath,
