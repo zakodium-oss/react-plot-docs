@@ -1,3 +1,3 @@
 module.exports = {
-  stats: "errors-only",
+  stats: 'errors-only',
 };

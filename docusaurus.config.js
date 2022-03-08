@@ -1,41 +1,62 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
+const path = require('path');
+const lightCodeTheme = require('prism-react-renderer/themes/github');
+const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
-const lightCodeTheme = require("prism-react-renderer/themes/github");
-const darkCodeTheme = require("prism-react-renderer/themes/dracula");
+async function demoLoaderPlugin() {
+  return {
+    name: 'demo-loader',
+    configureWebpack() {
+      return {
+        module: {
+          rules: [
+            {
+              test: /\.demo.tsx$/,
+              use: {
+                loader: path.resolve(__dirname, 'demo-loader.webpack.js'),
+              },
+            },
+          ],
+        },
+      };
+    },
+  };
+}
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "react-plot userguide",
-  tagline: "React component to display scientific plots",
-  url: "https://react-plot.zakodium.com",
-  baseUrl: "/",
-  onBrokenLinks: "throw",
-  onBrokenMarkdownLinks: "throw",
-  favicon: "img/favicon.ico",
-  organizationName: "zakodium", // Usually your GitHub org/user name.
-  projectName: "react-plot", // Usually your repo name.
+  title: 'react-plot userguide',
+  tagline: 'React component to display scientific plots',
+  url: 'https://react-plot.zakodium.com',
+  baseUrl: '/',
+  onBrokenLinks: 'throw',
+  onBrokenMarkdownLinks: 'throw',
+  favicon: 'img/favicon.ico',
+  organizationName: 'zakodium', // Usually your GitHub org/user name.
+  projectName: 'react-plot', // Usually your repo name.
   plugins: [
+    demoLoaderPlugin,
     [
-      require.resolve("@easyops-cn/docusaurus-search-local"),
+      require.resolve('@easyops-cn/docusaurus-search-local'),
       {
         // ... Your options.
         // `hashed` is recommended as long-term-cache of index file is possible.
         hashed: true,
-        docsRouteBasePath: "/eln",
+        docsRouteBasePath: '/eln',
         indexPages: true, //because of bug: https://github.com/easyops-cn/docusaurus-search-local/issues/42
       },
     ],
   ],
   presets: [
     [
-      "classic",
+      'classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          routeBasePath: "/",
-          sidebarPath: require.resolve("./sidebars.js"),
-          editUrl: "https://github.com/zakodium/react-plot-docs/tree/main/",
+          routeBasePath: '/',
+          sidebarPath: require.resolve('./sidebars.js'),
+          editUrl: 'https://github.com/zakodium/react-plot-docs/tree/main/',
           sidebarItemsGenerator: async function ({
             defaultSidebarItemsGenerator,
             ...args
@@ -48,7 +69,11 @@ const config = {
 
         blog: false,
         theme: {
-          customCss: require.resolve("./src/css/custom.css"),
+          customCss: [
+            require.resolve('./src/css/custom.css'),
+            require.resolve('./src/css/demo.css'),
+          ],
+          prism: {},
         },
       }),
     ],
@@ -58,52 +83,52 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: "React Plot",
+        title: 'React Plot',
         logo: {
-          alt: "Zakodium Logo",
-          src: "img/logo.svg",
+          alt: 'Zakodium Logo',
+          src: 'img/logo.svg',
         },
         items: [
           {
-            type: "doc",
-            docId: "intro",
-            position: "left",
-            label: "Tutorial",
+            type: 'doc',
+            docId: 'intro',
+            position: 'left',
+            label: 'Tutorial',
           },
           {
-            href: "https://github.com/zakodium/react-plot",
-            label: "GitHub",
-            position: "right",
+            href: 'https://github.com/zakodium/react-plot',
+            label: 'GitHub',
+            position: 'right',
           },
         ],
       },
       footer: {
-        style: "dark",
+        style: 'dark',
         links: [
           {
-            title: "Docs",
+            title: 'Docs',
             items: [
               {
-                label: "Tutorial",
-                to: "/",
+                label: 'Tutorial',
+                to: '/',
               },
             ],
           },
           {
-            title: "Community",
+            title: 'Community',
             items: [
               {
-                label: "Twitter",
-                href: "https://twitter.com/zakodium",
+                label: 'Twitter',
+                href: 'https://twitter.com/zakodium',
               },
             ],
           },
           {
-            title: "More",
+            title: 'More',
             items: [
               {
-                label: "GitHub",
-                href: "https://github.com/zakodium/react-plot",
+                label: 'GitHub',
+                href: 'https://github.com/zakodium/react-plot',
               },
             ],
           },
@@ -115,10 +140,9 @@ const config = {
         darkTheme: darkCodeTheme,
       },
     }),
-  themes: ["@docusaurus/theme-live-codeblock"],
 };
 
-const ignoredLabels = ["includes"];
+const ignoredLabels = ['includes'];
 
 function filterItems(items) {
   items = items.filter((item) => !ignoredLabels.includes(item.label));

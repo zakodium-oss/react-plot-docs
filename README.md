@@ -16,6 +16,12 @@ $ yarn start
 
 This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
 
+### Demos
+
+There is a custom webpack loader to automatically process demo files. Demo files are examples of code that illustrate how to use react-plot.
+
+To create a demo, just create a file which ends in `.demo.tsx` next to your `md` file and import it / use it from there. The demo file should have a default export with the example to render.
+
 ### Build
 
 ```

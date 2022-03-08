@@ -1,22 +1,5 @@
-```jsx live
-function Fetch() {
-  const [data, setData] = useState({});
+import FetchDemo from './Fetch.demo.tsx';
 
-  useEffect(async () => {
-    try {
-      const response = await fetch(
-        "https://data.cheminfo.org/temp/test.nmrium"
-      );
-      setData(await response.json());
-    } catch (e) {
-      setData({ version: "ERROR" });
-    }
-  }, []);
+# Fetch
 
-  return (
-    <div>
-      <h2>Version of file is {data.version}</h2>
-    </div>
-  );
-}
-```
+<FetchDemo />
