@@ -7,8 +7,8 @@ Example of code loading and converting a jcamp (using `jcampconverter`)
 
 ## <sup>1</sup>H NMR
 
-<NMR1HDemo />
+<NMR1HDemo noCodesandbox/>
 
 ## <sup>13</sup>C NMR
 
-<NMR13CDemo />
+<NMR13CDemo noCodesandbox />

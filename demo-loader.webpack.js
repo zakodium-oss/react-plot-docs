@@ -73,7 +73,7 @@ Example:
   const exampleSource = ${JSON.stringify(source)};
   const __EXAMPLE__ = ${functionComponentSource}
 
-  export default function __EXAMPLE_DEMO__() {
+  export default function __EXAMPLE_DEMO__(props) {
     const [showCode, setShowCode] = __useState__(false);
     return (
       <>
@@ -89,15 +89,17 @@ Example:
             >
               Code
             </button>
-            <CodeSandboxer
-              name="${name}"
-              source={exampleSource}
-              dependencies={${JSON.stringify(codeSandboxDependencies)}}
-            >
-              {() => {
-                return <button type="submit">Open sandbox</button>;
-              }}
-            </CodeSandboxer>
+            {props.noCodesandbox ? null : (
+              <CodeSandboxer
+                name="${name}"
+                source={exampleSource}
+                dependencies={${JSON.stringify(codeSandboxDependencies)}}
+              >
+                {() => {
+                  return <button type="submit">Open sandbox</button>;
+                }}
+              </CodeSandboxer>
+            )}
           </div>
         </div>
         {showCode && (
