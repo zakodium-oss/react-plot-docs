@@ -1,5 +1,6 @@
 import { xyToXYObject } from 'ml-spectra-processing';
 import React, { useEffect, useState } from 'react';
+import { convert as convertJcamp } from 'jcampconverter';
 import {
   Annotations,
   Axis,
@@ -9,7 +10,6 @@ import {
   SeriesPoint,
   useRectangularZoom,
 } from 'react-plot';
-import getConvertJcamp from '../src/util/getConvertJcamp';
 
 function ZoomablePlot() {
   const [data, setData] = useState<SeriesPoint[]>([]);
@@ -17,13 +17,16 @@ function ZoomablePlot() {
   useEffect(() => {
     fetch('/data/ir.jdx').then((response) => {
       response.text().then((jcamp) => {
-        const data = xyToXYObject(
-          getConvertJcamp()(jcamp).flatten[0].spectra[0].data,
-        ).map((point) => ({ x: point.x, y: point.y * 100 }));
+        const spectraData = convertJcamp(jcamp).flatten[0].spectra[0].data;
+        const data = xyToXYObject(spectraData).map((point) => ({
+          x: point.x,
+          y: point.y * 100,
+        }));
         setData(data);
       });
     });
   }, []);
+
   const zoom = useRectangularZoom();
   return (
     <Plot width={800} height={300}>

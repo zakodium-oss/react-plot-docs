@@ -9,7 +9,7 @@ import {
   SeriesPoint,
   useAxisZoom,
 } from 'react-plot';
-import getConvertJcamp from '../../src/util/getConvertJcamp';
+import { convert as convertJcamp } from 'jcampconverter';
 
 function ZoomablePlot() {
   const [data, setData] = useState<SeriesPoint[]>();
@@ -17,9 +17,8 @@ function ZoomablePlot() {
   useEffect(() => {
     fetch('/data/nmr-13c.jdx').then((response) => {
       response.text().then((jcamp) => {
-        const data = xyToXYObject(
-          getConvertJcamp()(jcamp).flatten[0].spectra[0].data,
-        );
+        const jcampData = convertJcamp(jcamp).flatten[0].spectra[0].data;
+        const data = xyToXYObject(jcampData);
         setData(data);
       });
     });

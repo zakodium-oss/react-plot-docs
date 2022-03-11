@@ -11,7 +11,7 @@ import {
   useRectangularZoom,
 } from 'react-plot';
 
-import getConvertJcamp from '../../src/util/getConvertJcamp';
+import { convert as convertJcamp } from 'jcampconverter';
 
 export default function InfraredZoomablePlot() {
   return (
@@ -28,10 +28,12 @@ function ZoomablePlot() {
   useEffect(() => {
     fetch('/data/ir.jdx').then((response) => {
       response.text().then((jcamp) => {
-        const data = xyToXYObject(
-          getConvertJcamp()(jcamp).flatten[0].spectra[0].data,
-        ).map((point) => ({ x: point.x, y: point.y * 100 }));
-        setData(data);
+        const jcampData = convertJcamp(jcamp).flatten[0].spectra[0].data;
+        const xyData = xyToXYObject(jcampData).map((point) => ({
+          x: point.x,
+          y: point.y * 100,
+        }));
+        setData(xyData);
       });
     });
   }, []);
