@@ -19,12 +19,7 @@ function ZoomablePlot() {
   useEffect(() => {
     fetch('/data/mass-peg1500.txt').then((response) => {
       response.text().then((text) => {
-        setData(
-          xyToXYObject(
-            // @ts-expect-error
-            parseXY(text),
-          ),
-        );
+        setData(xyToXYObject(parseXY(text)));
       });
     });
   }, []);
