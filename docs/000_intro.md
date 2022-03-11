@@ -13,4 +13,4 @@ React-plot is a react component specially designed to display scientific informa
 
 Interactivity with the plot is achieved Using `hooks`. In the following example it is possible to draw a rectangle to zoom and click twice to reset the original zoom.
 
-<ZoomableInfrared />
+<ZoomableInfrared noCodesandbox/>
