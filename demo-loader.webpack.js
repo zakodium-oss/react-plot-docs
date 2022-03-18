@@ -61,14 +61,15 @@ Example:
     defaultDeclaration.id?.name || 'ReactPlotDemo',
   );
 
+  const codeSandboxImportPath = path
+    .relative(this.context, path.join('src', 'components', 'CodeSandboxer.tsx'))
+    .replaceAll(path.sep, path.posix.sep);
+
   const modifiedSource = `
   ${beforeDefaultExportSource}
   import { useState as __useState__ } from 'react';
   import CodeBlock from '@theme/CodeBlock';
-  import CodeSandboxer from '${path.relative(
-    this.context,
-    'src/components/CodeSandboxer.tsx',
-  )}';
+  import CodeSandboxer from '${codeSandboxImportPath}';
   
   const exampleSource = ${JSON.stringify(source)};
   const __EXAMPLE__ = ${functionComponentSource}
