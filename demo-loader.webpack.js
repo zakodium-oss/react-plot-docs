@@ -1,4 +1,3 @@
-const path = require('path');
 const pkg = require('./package.json');
 const changeCase = require('change-case');
 const babel = require('@babel/core');
@@ -65,10 +64,7 @@ Example:
   ${beforeDefaultExportSource}
   import { useState as __useState__ } from 'react';
   import CodeBlock from '@theme/CodeBlock';
-  import CodeSandboxer from '${path.relative(
-    this.context,
-    'src/components/CodeSandboxer.tsx',
-  )}';
+  import CodeSandboxer from '/src/components/CodeSandboxer.tsx';
   
   const exampleSource = ${JSON.stringify(source)};
   const __EXAMPLE__ = ${functionComponentSource}
