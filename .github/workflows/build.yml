@@ -3,8 +3,7 @@ name: Build and deploy on GitHub pages
 on:
   workflow_dispatch:
   push:
-    branches:
-      - main
+    branches: main
 
 jobs:
   deploy:
