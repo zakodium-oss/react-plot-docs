@@ -2,7 +2,9 @@
 
 ## Props
 
-### Markers
+Like all other series, scatter series have **[Base props](http://localhost:3000/series/intro#base-props)**, but in addition to that they also have many other props that we can class into the following categories :
+
+### 1. Markers
 
 - **displayMarkers:** display scatter points markers<br />
   type: `boolean`<br/>
@@ -17,7 +19,7 @@
   type: `CSSFuncProps`<br/>
   default: `{}`
 
-### Point Label
+### 2. Point Label
 
 - **pointLabel:** serie's point label (statique / dynamique)<br />
   type: `LabelFuncProps`<br/>
@@ -26,7 +28,7 @@
   type: `CSSFuncProps`<br/>
   default: `{}`
 
-### ErrorBars
+### 3. ErrorBars
 
 - **displayErrorBars:** display errors bars in the serie<br />
   type: `boolean`<br/>
@@ -38,7 +40,7 @@
 - **errorBarsCapStyle:** change error bars cap's style<br />
   type: `SVGAttributes<SVGLineElement>`<br/>
 
-### Lines
+### 4. Lines
 
 - **displayLines:** display line between scatter series points<br />
   type: `boolean`<br/>
