@@ -1,20 +1,4 @@
-# Getting started
-
 import SimpleExample from './SimpleExample.demo.tsx';
-
-# Installtion
-
-- #### NPM
-
-```
-npm i react-plot
-```
-
-- #### yarn
-
-```
-yarn add react-plot
-```
 
 # Basics
 
