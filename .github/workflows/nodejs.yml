@@ -1,0 +1,22 @@
+name: Actions
+
+on:
+  push:
+    branches: main
+  pull_request:
+
+env:
+  NODE_VERSION: 16.x
+
+jobs:
+  prettier-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+      - name: Install dependencies
+        run: npm ci
+      - name: Run Prettier
+        run: npm run prettier
