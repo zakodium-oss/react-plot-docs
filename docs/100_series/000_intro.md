@@ -17,7 +17,7 @@ There are currently 5 different kind of series that can be added in a plot:
 
 Series are direct children of the `Plot` component and you may have as many Series as you which on the same plot.
 
-## BaseSeriesProps
+## Base Props
 
 they are the props that all series have:
 
@@ -53,6 +53,6 @@ they are the props that all series have:
   default: `0`
   -->
 
-## Examples
+## Example
 
 <SeriesDemo />
