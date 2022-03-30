@@ -56,7 +56,7 @@ const config = {
         docs: {
           routeBasePath: '/',
           sidebarPath: require.resolve('./sidebars.js'),
-          editUrl: 'https://github.com/zakodium/react-plot-docs/tree/main/',
+          editUrl: 'https://github.com/zakodium-oss/react-plot-docs/tree/main/',
           sidebarItemsGenerator: async function ({
             defaultSidebarItemsGenerator,
             ...args
@@ -96,7 +96,7 @@ const config = {
             label: 'Tutorial',
           },
           {
-            href: 'https://github.com/zakodium/react-plot',
+            href: 'https://github.com/zakodium-oss/react-plot',
             label: 'GitHub',
             position: 'right',
           },
@@ -128,7 +128,7 @@ const config = {
             items: [
               {
                 label: 'GitHub',
-                href: 'https://github.com/zakodium/react-plot',
+                href: 'https://github.com/zakodium-oss/react-plot',
               },
             ],
           },
