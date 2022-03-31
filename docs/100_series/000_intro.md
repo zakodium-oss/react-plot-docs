@@ -2,7 +2,6 @@
 
 import SeriesDemo from './Series.demo.tsx';
 import SeriesWithErrorDemo from './SeriesWithError.demo.tsx';
-import ScatterSeriesDemo from './ScatterSeries.demo.tsx';
 import FunctionSeriesDemo from './FunctionSeries.demo.tsx';
 import BarSeriesDemo from './BarSeries.demo.tsx';
 import RangeSeriesDemo from './RangeSeries.demo.tsx';
@@ -21,15 +20,15 @@ Series are direct children of the `Plot` component and you may have as many Seri
 
 they are the props that all series have:
 
-#### Mandatory
+#### <u>Mandatory</u>
 
 - **data:** displayed serie's data<br/>
   type: `Array of points`
 
-#### Optional
+#### <u>Optional</u>
 
-- **id:** "string"<br/>
-  serie id
+- **id:** serie id<br/>
+  type: `string`
 - **xAxis:** series horizontal axis id <br />
   type: `string`<br/>
   default: `"x"`

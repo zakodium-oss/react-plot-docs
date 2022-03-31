@@ -1,14 +1,22 @@
 # Scatter Series
 
+import ScatterSeriesDemo from './ScatterSeries.demo.tsx';
+import ScatterSeriesMarkerDemo from './ScatterSeriesMarker.demo.tsx';
+import ScatterSeriesMarkerPointLabel from './ScatterSeriesMarkerPointLabel.demo.tsx';
+
 ## Props
 
 Like all other series, scatter series have **[Base props](http://localhost:3000/series/intro#base-props)**, but in addition to that they also have many other props that we can class into the following categories :
 
 ### 1. Markers
 
+<!--
+  todo: next release
 - **displayMarkers:** display scatter points markers<br />
   type: `boolean`<br/>
   default: `true`
+  -->
+
 - **markerShape:** serie's markers shape that can be dynamique or statique<br />
   type: `ShapeFuncProps`<br/>
   default: `'circle'`
@@ -19,6 +27,8 @@ Like all other series, scatter series have **[Base props](http://localhost:3000/
   type: `CSSFuncProps`<br/>
   default: `{}`
 
+<ScatterSeriesMarkerDemo/>
+
 ### 2. Point Label
 
 - **pointLabel:** serie's point label (statique / dynamique)<br />
@@ -27,6 +37,8 @@ Like all other series, scatter series have **[Base props](http://localhost:3000/
 - **pointLabelStyle:** serie's point label style (statique / dynamique)<br />
   type: `CSSFuncProps`<br/>
   default: `{}`
+
+<ScatterSeriesMarkerPointLabel/>
 
 ### 3. ErrorBars
 
@@ -48,3 +60,7 @@ Like all other series, scatter series have **[Base props](http://localhost:3000/
 - **lineStyle:** change line between scatter series points (statique / dynamique)<br />
   type: `CSSFuncProps`<br/>
   default: `false`
+
+## Example
+
+<ScatterSeriesDemo/>

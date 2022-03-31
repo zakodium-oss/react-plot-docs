@@ -1,3 +1,4 @@
+import { xAbsolute } from 'ml-spectra-processing';
 import React from 'react';
 import { Plot, ScatterSeries } from 'react-plot';
 
@@ -5,6 +6,11 @@ export default function Series() {
   return (
     <Plot width={300} height={300}>
       <ScatterSeries
+        pointLabel={'5'}
+        pointLabelStyle={{
+          fill: ({ x }) => (x > 2 ? 'red' : 'grey'),
+          fontWeight: 'bolder',
+        }}
         data={[
           { x: 1, y: 1 },
           { x: 2, y: 2 },
@@ -14,6 +20,10 @@ export default function Series() {
         ]}
       />
       <ScatterSeries
+        pointLabel={({ x, y }) => `(${x},${y})`}
+        pointLabelStyle={{
+          transform: 'translate(3px, -4px)',
+        }}
         data={[
           { x: 1, y: 0 },
           { x: 2, y: 1 },
