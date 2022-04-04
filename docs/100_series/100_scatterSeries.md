@@ -1,4 +1,4 @@
-# Scatter Series
+# ScatterSeries
 
 import ScatterSeriesDemo from './scatterSeries/ScatterSeries.demo.tsx';
 import ScatterSeriesMarkerDemo from './scatterSeries/ScatterSeriesMarker.demo.tsx';

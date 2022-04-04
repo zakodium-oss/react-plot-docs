@@ -1,4 +1,4 @@
-# Line Series
+# LineSeries
 
 import LineSeriesDemo from './lineSeries/LineSeries.demo.tsx';
 import LineSeriesMarkerDemo from './lineSeries/LineSeriesMarker.demo.tsx';

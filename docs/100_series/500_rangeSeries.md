@@ -1,4 +1,4 @@
-# Range Series
+# RangeSeries
 
 import RangeSeriesDemo from './rangeSeries/RangeSeries.demo.tsx';
 import RangeSeriesLines from './rangeSeries/RangeSeriesLines.demo.tsx';

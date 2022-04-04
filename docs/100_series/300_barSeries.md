@@ -1,4 +1,4 @@
-# Bar Series
+# BarSeries
 
 import BarSeriesDemo from './barSeries/BarSeries.demo.tsx';
 import BarSeriesMarkerDemo from './barSeries/BarSeriesMarker.demo.tsx';

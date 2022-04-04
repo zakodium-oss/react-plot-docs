@@ -1,4 +1,4 @@
-# Function Series
+# FunctionSeries
 
 import FunctionSeriesDemo from './functionSeries/FunctionSeries.demo.tsx';
 import FunctionSeriesRestriction from './functionSeries/FunctionSeriesRestriction.demo.tsx';
@@ -17,7 +17,7 @@ import FunctionSeriesPointLabel from './functionSeries/FunctionSeriesPointLabel.
 You must specify the horizontal domain to use `FunctionSeries` <br/>
 Use one of these options :<br/>
 
-- Add horizontal **[Axis](xxx)** with max and min<br/>
+- Add horizontal **[Axis](xxx)** and determine `max` and `min` props<br/>
   `<Axis min={0} max={20} position="bottom" />`
 - Add another Series to the plot. It will automatically specify the domain of horizontal axis
   <FunctionSeriesRestriction/>
@@ -26,9 +26,9 @@ Use one of these options :<br/>
 
 In `FuntionSeries` we don't have data we just need precise our function using `getY` callback
 
-#### <u>Example</u>
+#### <u>Example:</u>
 
-We want to display y=f(x); f declared function
+We want to display y=f(x), which f is a declared function
 `getY={(x)=>f(x)}`
 <FunctionSeriesData/>
 
