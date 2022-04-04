@@ -2,9 +2,11 @@
 
 import FunctionSeriesDemo from './functionSeries/FunctionSeries.demo.tsx';
 import FunctionSeriesRestriction from './functionSeries/FunctionSeriesRestriction.demo.tsx';
-import FunctionSeriesMarkerDemo from './functionSeries/FunctionSeriesMarker.demo.tsx';
-import FunctionSeriesPointLabel from './functionSeries/FunctionSeriesPointLabel.demo.tsx';
+import FunctionSeriesData from './functionSeries/FunctionSeriesData.demo.tsx';
 import FunctionSeriesLines from './functionSeries/FunctionSeriesLines.demo.tsx';
+
+<!-- import FunctionSeriesMarkerDemo from './functionSeries/FunctionSeriesMarker.demo.tsx';
+import FunctionSeriesPointLabel from './functionSeries/FunctionSeriesPointLabel.demo.tsx'; -->
 
 ## Display
 
@@ -22,17 +24,36 @@ Use one of these options :<br/>
 
 ## Data
 
-point type must extand from **[SeriesPoint](xxx)**
+In `FuntionSeries` we don't have data we just need precise our function using `getY` callback
+
+#### <u>Example</u>
+
+We want to display y=f(x); f declared function
+`getY={(x)=>f(x)}`
+<FunctionSeriesData/>
 
 ## Props
 
 Like all other series, scatter series have **[Base props](xxx)**<br/>
 They also have many other props that we can class into the following categories :
 
+### 1. Function
+
+- **getY:** (Mandatory) function that you want to display <br />
+  type: `(x:number)=>number`
+
+### 2. Lines
+
+- **lineStyle:** styling of the serie's path statique or dynamique that depend series id<br />
+  type: `CSSFuncProps<{id}>`<br/>
+  default: `false`
+
+<FunctionSeriesLines/>
+
 <!--
 todo: add this part after fixing markers & pointLabel
 
-### 1. Markers
+### 3. Markers
 
 - **displayMarkers:** display scatter points markers<br />
   type: `boolean`<br/>
@@ -49,7 +70,7 @@ todo: add this part after fixing markers & pointLabel
 
 <FunctionSeriesMarkerDemo/>
 
-### 2. Point Label
+### 4. Point Label
 
 - **pointLabel:** serie's point label that can be statique or dynamique depending points<br />
   type: `LabelFuncProps<point>`<br/>
@@ -59,11 +80,3 @@ todo: add this part after fixing markers & pointLabel
   default: `{}`
 
 <FunctionSeriesPointLabel/> -->
-
-### 3. Lines
-
-- **lineStyle:** styling of the serie's path statique or dynamique that depend series id<br />
-  type: `CSSFuncProps<{id}>`<br/>
-  default: `false`
-
-<FunctionSeriesLines/>

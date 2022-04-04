@@ -1,5 +1,5 @@
 import React from 'react';
-import { Plot, FunctionSeries, Axis, Legend, LineSeries } from 'react-plot';
+import { Plot, FunctionSeries, LineSeries } from 'react-plot';
 
 export default function Series() {
   return (
