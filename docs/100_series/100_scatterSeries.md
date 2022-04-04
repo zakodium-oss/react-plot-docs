@@ -1,12 +1,22 @@
 # Scatter Series
 
-import ScatterSeriesDemo from './ScatterSeries.demo.tsx';
-import ScatterSeriesMarkerDemo from './ScatterSeriesMarker.demo.tsx';
-import ScatterSeriesMarkerPointLabel from './ScatterSeriesMarkerPointLabel.demo.tsx';
+import ScatterSeriesDemo from './scatterSeries/ScatterSeries.demo.tsx';
+import ScatterSeriesMarkerDemo from './scatterSeries/ScatterSeriesMarker.demo.tsx';
+import ScatterSeriesPointLabel from './scatterSeries/ScatterSeriesPointLabel.demo.tsx';
+import ScatterSeriesError from './scatterSeries/ScatterSeriesError.demo.tsx';
+import ScatterSeriesLines from './scatterSeries/ScatterSeriesLines.demo.tsx';
+
+## Display
+
+<ScatterSeriesDemo/>
+
+## Data
+
+point type must extand from **[SeriesPoint](xxx)**
 
 ## Props
 
-Like all other series, scatter series have **[Base props](http://localhost:3000/series/intro#base-props)**, but in addition to that they also have many other props that we can class into the following categories :
+Like all other series, scatter series have **[Base props](xxx)**, but in addition to that they also have many other props that we can class into the following categories :
 
 ### 1. Markers
 
@@ -38,7 +48,7 @@ Like all other series, scatter series have **[Base props](http://localhost:3000/
   type: `CSSFuncProps`<br/>
   default: `{}`
 
-<ScatterSeriesMarkerPointLabel/>
+<ScatterSeriesPointLabel/>
 
 ### 3. ErrorBars
 
@@ -52,8 +62,11 @@ Like all other series, scatter series have **[Base props](http://localhost:3000/
 - **errorBarsCapStyle:** change error bars cap's style<br />
   type: `SVGAttributes<SVGLineElement>`<br/>
 
-### 4. Lines
+<ScatterSeriesError/>
 
+<!-- ### 4. Lines -->
+<!--
+  todo: next release
 - **displayLines:** display line between scatter series points<br />
   type: `boolean`<br/>
   default: `false`
@@ -61,6 +74,5 @@ Like all other series, scatter series have **[Base props](http://localhost:3000/
   type: `CSSFuncProps`<br/>
   default: `false`
 
-## Example
-
-<ScatterSeriesDemo/>
+<ScatterSeriesLines/>
+-->
