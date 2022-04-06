@@ -12,11 +12,11 @@ import ScatterSeriesLines from './scatterSeries/ScatterSeriesLines.demo.tsx';
 
 ## Data
 
-point type must extand from **[SeriesPoint](./000_intro.md)**
+point type must extand from **[SeriesPoint](./000_intro.md/#data)**
 
 ## Props
 
-Like all other series, scatter series have **[Base props](./000_intro.md)**, but in addition to that they also have many other props that we can class into the following categories :
+Like all other series, scatter series have **[Base props](./000_intro.md/#base-props)**, but in addition to that they also have many other props that we can class into the following categories :
 
 ### 1. Markers
 

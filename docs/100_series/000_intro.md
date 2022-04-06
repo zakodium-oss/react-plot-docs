@@ -17,9 +17,17 @@ Series are direct children of the `Plot` component and you may have as many Seri
 The main purpose of `react-plot` is displaying different data in many ways.
 Data is an array of points that differ from serie to another <br/>
 
-#### <u>Example:</u>
+### Types
 
-`data=[{ x: 1, y: 1 }, { x: 2, y: 5 }, { x: 3, y: 3 }, { x: 4, y: 2 }, { x: 5, y: 1 }] `
+The data used must be extands from the following types:
+
+- **SeriesPoint:** used in different series: [ScatterSeries](./100_scatterSeries.md), [LineSeries](./200_lineSeries.md),[BarSeries](./300_barSeries.md)
+
+  `data=[ { x: 1, y: 1 }, { x: 2, y: 5 }, { x: 3, y: 3 }, { x: 4, y: 2 }, { x: 5, y: 1 } ] `
+
+- **RangeSeriesPoint:** used in [RangeSeries](./500_rangeSeries.md)
+
+  `data=[ { x: 1, y1: 0, y2: 2 }, { x: 2, y1: 2, y2: 3 }, { x: 3, y1: 3, y2: 4 } ]`
 
 ## Base Props
 

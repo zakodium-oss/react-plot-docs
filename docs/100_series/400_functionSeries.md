@@ -34,7 +34,7 @@ We want to display y=f(x), which f is a declared function
 
 ## Props
 
-Like all other series, scatter series have **[Base props](./000_intro.md)**<br/>
+Like all other series, scatter series have **[Base props](./000_intro.md/#base-props)**<br/>
 They also have many other props that we can class into the following categories :
 
 ### 1. Function
