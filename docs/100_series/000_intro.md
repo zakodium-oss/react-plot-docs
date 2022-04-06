@@ -1,5 +1,7 @@
 # Introduction
 
+import SeriesDemo from './Series.demo.tsx';
+
 There are currently 5 different kind of series that can be added in a plot:
 
 - **[ScatterSeries](xxx)**
