@@ -17,7 +17,7 @@ import FunctionSeriesPointLabel from './functionSeries/FunctionSeriesPointLabel.
 You must specify the horizontal domain to use `FunctionSeries` <br/>
 Use one of these options :<br/>
 
-- Add horizontal **[Axis](xxx)** and determine `max` and `min` props<br/>
+- Add horizontal **[Axis](../200_axis/100_axis.md)** and determine `max` and `min` props<br/>
   `<Axis min={0} max={20} position="bottom" />`
 - Add another Series to the plot. It will automatically specify the domain of horizontal axis
   <FunctionSeriesRestriction/>
@@ -34,7 +34,7 @@ We want to display y=f(x), which f is a declared function
 
 ## Props
 
-Like all other series, scatter series have **[Base props](xxx)**<br/>
+Like all other series, scatter series have **[Base props](./000_intro.md)**<br/>
 They also have many other props that we can class into the following categories :
 
 ### 1. Function

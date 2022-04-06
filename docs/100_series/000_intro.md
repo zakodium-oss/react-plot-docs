@@ -4,11 +4,11 @@ import SeriesDemo from './Series.demo.tsx';
 
 There are currently 5 different kind of series that can be added in a plot:
 
-- **[ScatterSeries](xxx)**
-- **[LineSeries](xxx)**
-- **[BarSeries](xxx)**
-- **[FunctionSeries](xxx)**
-- **[RangeSeries](xxx)**
+- **[ScatterSeries](./100_scatterSeries.md)**
+- **[LineSeries](./200_lineSeries.md)**
+- **[BarSeries](./300_barSeries.md)**
+- **[FunctionSeries](./400_functionSeries.md)**
+- **[RangeSeries](./500_rangeSeries.md)**
 
 Series are direct children of the `Plot` component and you may have as many Series as you which on the same plot.
 
