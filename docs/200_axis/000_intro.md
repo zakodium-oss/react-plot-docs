@@ -1,6 +1,7 @@
 # Introduction
 
 import DefaultAxis from "./DefaultAxis.demo.tsx"
+import AxesDemo from "./Axes.demo.tsx"
 
 Axes are one of the main component in `react-plot` <br/>
 
@@ -15,6 +16,8 @@ They must be direct children of the `Plot` component and you may have many on th
 
 Adding any **[Series](../100_series/000_intro.md)** in your plot will create automatically the two basic axis <br/>
 
-#### <u>Example:</u>
-
 <DefaultAxis/>
+
+## Example
+
+<AxesDemo/>

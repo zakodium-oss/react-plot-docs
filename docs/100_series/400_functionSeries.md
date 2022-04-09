@@ -2,6 +2,7 @@
 
 import FunctionSeriesDemo from './functionSeries/FunctionSeries.demo.tsx';
 import FunctionSeriesRestriction from './functionSeries/FunctionSeriesRestriction.demo.tsx';
+import FunctionSeriesError from './functionSeries/FunctionSeriesError.demo.tsx';
 import FunctionSeriesData from './functionSeries/FunctionSeriesData.demo.tsx';
 import FunctionSeriesLines from './functionSeries/FunctionSeriesLines.demo.tsx';
 
@@ -14,8 +15,9 @@ import FunctionSeriesPointLabel from './functionSeries/FunctionSeriesPointLabel.
 
 ## Restriction
 
-You must specify the horizontal domain to use `FunctionSeries` <br/>
-Use one of these options :<br/>
+You must specify the horizontal domain to use `FunctionSeries` otherwise the plot will not be displayed (next example)<br/>
+<FunctionSeriesError/>
+To set the horizontal domain use one of these options :<br/>
 
 - Add horizontal **[Axis](../200_axis/100_axis.md)** and determine `max` and `min` props<br/>
   `<Axis min={0} max={20} position="bottom" />`
@@ -24,7 +26,7 @@ Use one of these options :<br/>
 
 ## Data
 
-In `FuntionSeries` we don't have data we just need precise our function using `getY` callback
+In `FuntionSeries` we don't have data props we just need precise our function using `getY` callback
 
 #### <u>Example:</u>
 
