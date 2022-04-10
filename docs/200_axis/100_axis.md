@@ -4,6 +4,8 @@ import AxisDemo from './axis/Axis.demo.tsx'
 import AxisPosition from './axis/AxisPosition.demo.tsx'
 import AxisId from './axis/AxisId.demo.tsx'
 import AxisScale from './axis/AxisScale.demo.tsx'
+import AxisFlip from './axis/AxisFlip.demo.tsx'
+import AxisHidden from './axis/AxisHidden.demo.tsx'
 
 Axis is the compoenet that allow you to add diffrent personlised axes in your Plot
 
@@ -62,9 +64,14 @@ Adding two bottom axis in the same plot will throw the next error :<br/>
 - **flip:** used to filp axis<br />
   type: `boolean`<br/>
   default: `false`
+
+  <AxisFlip/>
+
 - **hidden:** Hide all axis elements<br />
   type: `boolean`<br/>
   default: `false`
+
+  <AxisHidden/>
 
 **3. Personlise Axis**
 
