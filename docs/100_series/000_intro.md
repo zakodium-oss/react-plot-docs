@@ -54,17 +54,12 @@ They are the props that all series have:
 - **hidden:** hide serie<br />
   type: `boolean`<br/>
   default: `false`
-
-<!--
-  todo: in next release
-
- - **xShift:** "number or string"<br />
+- **xShift:** "number or string"<br />
   type: `number or string`<br/>
   default: `0`
 - **yShift:** "number or string"<br />
   type: `number or string`<br/>
   default: `0`
-  -->
 
 ## Example
 

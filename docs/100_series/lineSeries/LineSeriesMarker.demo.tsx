@@ -5,8 +5,7 @@ export default function Series() {
   return (
     <Plot width={300} height={300}>
       <LineSeries
-        // todo : change displayMarkers in the next release
-        displayMarker
+        displayMarkers
         markerShape="diamond"
         markerSize={15}
         markerStyle={{

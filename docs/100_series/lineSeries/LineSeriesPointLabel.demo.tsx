@@ -5,8 +5,6 @@ export default function Series() {
   return (
     <Plot width={300} height={300}>
       <LineSeries
-        // todo : remove display marker
-        displayMarker
         pointLabel="5"
         pointLabelStyle={{
           fill: ({ x }) => (x > 2 ? 'green' : 'blue'),
@@ -21,8 +19,6 @@ export default function Series() {
         ]}
       />
       <LineSeries
-        // todo : remove display marker
-        displayMarker
         pointLabel={({ x, y }) => `(${x},${y})`}
         pointLabelStyle={{
           transform: 'translate(3px, -4px)',

@@ -6,9 +6,8 @@ export default function Series() {
   return (
     <Plot width={300} height={300}>
       <ScatterSeries
-        // todo: next release
-        // displayLines
-        // lineStyle={{ stroke: ({ y }) => (y > 1 ? 'red' : 'green') }}
+        displayLines
+        lineStyle={{ stroke: ({ y }) => (y > 1 ? 'red' : 'green') }}
         data={[
           { x: 1, y: 1 },
           { x: 2, y: 2 },

@@ -51,34 +51,3 @@ They also have many other props that we can class into the following categories 
   default: `false`
 
 <FunctionSeriesLines/>
-
-<!--
-todo: add this part after fixing markers & pointLabel
-
-### 3. Markers
-
-- **displayMarkers:** display scatter points markers<br />
-  type: `boolean`<br/>
-  default: `true`
-- **markerShape:** serie's markers shape<br />
-  type: `Shape`<br/>
-  default: `'circle'`
-- **markerSize:** serie's markers size<br />
-  type: `number`<br/>
-  default: `8`
-- **markerStyle:** serie's markers style that can be dynamique or statique<br />
-  type: `CSSFuncProps`<br/>
-  default: `{}`
-
-<FunctionSeriesMarkerDemo/>
-
-### 4. Point Label
-
-- **pointLabel:** serie's point label that can be statique or dynamique depending points<br />
-  type: `LabelFuncProps<point>`<br/>
-  default: `''`
-- **pointLabelStyle:** serie's point label style, statique or dynamique depending points<br />
-  type: `CSSFuncProps<point>`<br/>
-  default: `{}`
-
-<FunctionSeriesPointLabel/> -->

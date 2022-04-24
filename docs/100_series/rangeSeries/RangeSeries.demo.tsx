@@ -12,8 +12,6 @@ export default function Series() {
           { x: 4, y1: 2, y2: 4 },
           { x: 5, y1: 1, y2: 5 },
         ]}
-        //todo : delete lineStyle after adding default style
-        lineStyle={{ fill: 'blue' }}
       />
     </Plot>
   );

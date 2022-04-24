@@ -20,13 +20,9 @@ Like all other series, scatter series have **[Base props](./000_intro.md/#base-p
 
 ### 1. Markers
 
-<!--
-  todo: next release
 - **displayMarkers:** display scatter points markers<br />
   type: `boolean`<br/>
   default: `true`
-  -->
-
 - **markerShape:** serie's markers shape that can be dynamique or statique<br />
   type: `ShapeFuncProps`<br/>
   default: `'circle'`

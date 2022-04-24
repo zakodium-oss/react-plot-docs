@@ -35,8 +35,7 @@ export default function Series() {
         ]}
       />
       <ScatterSeries
-        // todo: next release
-        // displayMarkers={false}
+        displayMarkers={false}
         data={[
           { x: 1, y: 2 },
           { x: 2, y: 0 },
