@@ -7,7 +7,7 @@ export default function Series() {
       <Plot width={600} height={50}>
         <Axis min={0} max={6} position="top" label="Normal Axis" />
         {/** hidden axis */}
-        <Axis min={0} max={1} position="left" label="Axis Label" hidden />
+        <Axis min={0} max={1} position="left" hidden />
       </Plot>
       <Plot width={600} height={50}>
         <Axis
@@ -19,7 +19,7 @@ export default function Series() {
           flip
         />
         {/** hidden axis */}
-        <Axis min={0} max={1} position="left" label="Axis Label" hidden />
+        <Axis min={0} max={1} position="left" hidden />
       </Plot>
     </div>
   );

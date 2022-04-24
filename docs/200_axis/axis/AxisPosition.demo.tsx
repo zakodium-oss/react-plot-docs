@@ -3,7 +3,12 @@ import { Plot, Axis, ScatterSeries } from 'react-plot';
 
 export default function Series() {
   return (
-    <div style={{ display: 'flex', justifyContent: 'space-around' }}>
+    <div
+      style={{
+        display: 'flex',
+        justifyContent: 'space-around',
+      }}
+    >
       <Plot width={300} height={300}>
         <ScatterSeries
           data={[

@@ -3,13 +3,14 @@ import { Plot, Axis } from 'react-plot';
 
 export default function Series() {
   return (
-    <Plot width={600} height={50}>
+    <Plot width={300} height={100}>
+      <Axis max={20} min={0} position="bottom" hiddenLine label="Hidden Line" />
       <Axis
-        tickPosition="center"
+        max={20}
         min={0}
-        max={6}
-        position="bottom"
-        label="Axis Label"
+        position="top"
+        lineStyle={{ stroke: 'red' }}
+        label="Change line style"
       />
 
       {/** hidden axis */}
