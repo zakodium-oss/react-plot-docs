@@ -1,3 +1,0 @@
-# Heading
-
-Title and subtitle
