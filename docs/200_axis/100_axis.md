@@ -18,11 +18,11 @@ import AxisTicksPrimary from './axis/AxisTicksPrimary.demo.tsx'
 import AxisTicksSecondary from './axis/AxisTicksSecondary.demo.tsx'
 import AxisTicksLabel from './axis/AxisTicksLabel.demo.tsx'
 
-Axis is the compoenet that allow you to add diffrent personlised axes in your Plot
+Axis is a component that allow you to add different personalised axes in your Plot
 
 <AxisDemo/>
 
-# Restriction
+## Restriction
 
 In a `Plot`, we cannot have two `Axis` in the same `position`
 
@@ -30,42 +30,40 @@ In a `Plot`, we cannot have two `Axis` in the same `position`
 Adding two bottom axis in the same plot will throw the next error :<br/>
 `Plot can only have one bottom axis`
 
-# Props
+## Props
 
-## Mandatory
+### 1. Axis Positon
 
-- **position:** Axis position<br/>
+- **position:** mandatory prop that allow you to choose axis position<br/>
   type: `'top' | 'bottom' | 'left' | 'right'`
 
 <AxisPosition/>
 
-## Optional
-
-### 1. Set Axis Range
+### 2. Axis Range
 
   <AxisRange />
 
-- **min:** series horizontal axis id <br />
+- **min:** axis minimum domain value <br />
   type: `number`<br/>
   default: calculated automatically based on series data
-- **max:** series vertical axis id <br />
+- **max:** axis **maximum** domain value <br />
   type: `number`<br/>
   default: calculated automatically based on series data
 
   <AxisRangeMaxMin/>
 
-- **paddingStart:** add padding in the start of axis domain<br />
+- **paddingStart:** added value to range in the beginning of domain<br />
   type: [`ScalarValue`](./000_intro.md)<br/>
   default: `0`
-- **paddingEnd:** add padding in the end of axis domain<br />
+- **paddingEnd:** added value to range in the end of domain<br />
   type: [`ScalarValue`](./000_intro.md)<br/>
   default: `0`
 
   <AxisRangePadding/>
 
-### 2. Identify Axis
+### 3. Identify Axis
 
-- **id:** axis id<br/>
+- **id:** value used to identify an axis using a string<br/>
   type: `string`<br/>
   default:`"x" for horizontal axis,"y" for vertical axis`
 
@@ -77,7 +75,7 @@ Adding two bottom axis in the same plot will throw the next error :<br/>
 
 <AxisScale />
 
-### 3. Choose Axis Behaviour
+### 4. Choose Axis Behaviour
 
 - **flip:** used to filp axis<br />
   type: `boolean`<br/>
@@ -91,11 +89,11 @@ Adding two bottom axis in the same plot will throw the next error :<br/>
 
   <AxisHidden/>
 
-### 4. Personlise Axis
+### 5. Personlise Axis
 
 #### a. Line
 
-- **hiddenLine:** Hide line<br />
+- **hiddenLine:** Hide axis line<br />
   type: `boolean`<br/>
   default: `false`
 - **lineStyle:** change line style<br />
