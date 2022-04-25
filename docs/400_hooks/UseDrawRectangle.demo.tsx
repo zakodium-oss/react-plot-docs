@@ -1,6 +1,7 @@
 import React from 'react';
 import {
   Annotations,
+  Heading,
   LineSeries,
   Plot,
   PlotController,
@@ -11,6 +12,7 @@ function DrawRectanglePlot() {
   const drawRectangle = useDrawRectangle();
   return (
     <Plot width={300} height={300}>
+      <Heading title="Draw a rectangle" />
       <LineSeries
         data={[
           { x: 1, y: 1 },
