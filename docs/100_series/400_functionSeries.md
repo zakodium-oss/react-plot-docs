@@ -19,7 +19,7 @@ You must specify the horizontal domain to use `FunctionSeries` otherwise the plo
 <FunctionSeriesError/>
 To set the horizontal domain use one of these options :<br/>
 
-- Add horizontal **[Axis](../200_axis/100_axis.md)** and determine `max` and `min` props<br/>
+- Add horizontal **[Axis](../200_axes/100_axis.md)** and determine `max` and `min` props<br/>
   `<Axis min={0} max={20} position="bottom" />`
 - Add another Series to the plot. It will automatically specify the domain of horizontal axis
   <FunctionSeriesRestriction/>
