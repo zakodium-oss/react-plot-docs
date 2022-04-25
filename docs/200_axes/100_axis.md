@@ -67,13 +67,13 @@ Adding two bottom axis in the same plot will throw the next error :<br/>
   type: `string`<br/>
   default:`"x" for horizontal axis,"y" for vertical axis`
 
-<AxisId />
+  <AxisId />
 
 - **scale:** Axis scale type<br/>
   type: `'linear' | 'log' | 'time'`<br/>
   default:`'linear'`
 
-<AxisScale />
+  <AxisScale />
 
 ### 4. Choose Axis Behaviour
 

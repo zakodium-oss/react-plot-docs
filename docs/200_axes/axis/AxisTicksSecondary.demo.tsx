@@ -8,14 +8,14 @@ export default function Series() {
         max={20}
         min={0}
         position="top"
-        label="hidden primary ticks"
+        label="hidden secondary ticks"
         secondaryTickLength={0}
       />
       <Axis
         max={20}
         min={0}
         position="bottom"
-        label="personalized primary ticks"
+        label="personalized secondary ticks"
         secondaryTickLength={7}
         secondaryTickStyle={{ stroke: 'red' }}
       />
