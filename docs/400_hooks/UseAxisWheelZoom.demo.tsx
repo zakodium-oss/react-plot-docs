@@ -28,7 +28,7 @@ function WheelPlot() {
   );
 }
 
-export default function UseDrawRectangle() {
+export default function UseAxisWheelZoom() {
   return (
     <PlotController>
       <WheelPlot />

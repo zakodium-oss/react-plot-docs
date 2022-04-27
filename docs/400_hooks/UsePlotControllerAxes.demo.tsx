@@ -40,7 +40,7 @@ function TrackablePlot() {
   );
 }
 
-export default function usePlotControllerAxesDemo() {
+export default function UsePlotControllerAxes() {
   return (
     <PlotController>
       <TrackablePlot />

@@ -27,7 +27,7 @@ function PanPlot() {
   );
 }
 
-export default function UseDrawRectangle() {
+export default function UsePan() {
   return (
     <PlotController>
       <PanPlot />

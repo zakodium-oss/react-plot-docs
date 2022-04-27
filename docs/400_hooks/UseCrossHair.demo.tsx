@@ -27,7 +27,7 @@ function CrossHairPlot() {
   );
 }
 
-export default function UseDrawRectangle() {
+export default function UseCrossHair() {
   return (
     <PlotController>
       <CrossHairPlot />

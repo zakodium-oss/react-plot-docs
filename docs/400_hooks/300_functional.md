@@ -3,7 +3,7 @@
 import UseRectangularZoomDemo from './UseRectangularZoom.demo.tsx';
 import MultiRectangularZoom from './MultiRectangularZoom.demo.tsx';
 import UseAxisZoom from './UseAxisZoom.demo.tsx'
-import UseAxisWheelZoom from './useAxisWheelZoom.demo.tsx'
+import UseAxisWheelZoom from './UseAxisWheelZoom.demo.tsx'
 import UsePanDemo from './UsePan.demo.tsx'
 import UseCrossHairDemo from './UseCrossHair.demo.tsx'
 
