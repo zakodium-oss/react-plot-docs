@@ -11,11 +11,11 @@ These hooks allows you to do a specific precodeed functionalities
 
 currently we support the following functional hooks:
 
-- **[useAxisZoom](./200_draw.md#usedrawrectangle)**
-- **[useRectangularZoom](./200_draw.md#usedrawpath)**
-- **[useAxisWheelZoom](./200_draw.md#usedrawpath)**
-- **[useCrossHair](./200_draw.md#usedrawpath)**
-- **[usePan](./200_draw.md#usedrawpath)**
+- **[useAxisZoom](./300_functional.md#useaxiszoom)**
+- **[useRectangularZoom](./300_functional.md#userectangularzoom)**
+- **[useAxisWheelZoom](./300_functional.md#useaxiswheelzoom)**
+- **[useCrossHair](./300_functional.md#usecrosshair)**
+- **[usePan](./300_functional.md#usepan)**
 
 ## useAxisZoom
 
