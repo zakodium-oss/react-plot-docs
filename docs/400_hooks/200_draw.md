@@ -12,6 +12,8 @@ currently we support the following drawing hooks:
 
 ## useDrawRectangle
 
+There are 3 steps in order ot implement the draw rectangle:
+
 - wrap your plot component in `<PlotController>`
 - add the hook: `const drawRectangle = useDrawRectangle();`
 - add the `drawRectangle.annotations` in order to draw the zoom rectangle: `<Annotations>{drawRectangle.annotations}</Annotations>`
@@ -19,6 +21,8 @@ currently we support the following drawing hooks:
 <UseDrawRectangleDemo />
 
 ## useDrawPath
+
+There are 3 steps in order ot implement the draw path:
 
 - wrap your plot component in `<PlotController>`
 - add the hook: `const drawPath = useDrawPath();`
