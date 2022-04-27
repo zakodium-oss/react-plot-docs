@@ -1,19 +1,18 @@
 import React from 'react';
-
 import {
   Annotations,
   Heading,
   LineSeries,
   Plot,
   PlotController,
-  useRectangularZoom,
+  useDrawPath,
 } from 'react-plot';
 
-function ZoomablePlot() {
-  const zoom = useRectangularZoom();
+function DrawPathPlot() {
+  const drawPath = useDrawPath();
   return (
     <Plot width={300} height={300}>
-      <Heading title="Draw a rectangle" />
+      <Heading title="Draw a path" />
       <LineSeries
         data={[
           { x: 1, y: 1 },
@@ -23,15 +22,15 @@ function ZoomablePlot() {
           { x: 5, y: 1 },
         ]}
       />
-      <Annotations>{zoom.annotations}</Annotations>
+      <Annotations>{drawPath.annotations}</Annotations>
     </Plot>
   );
 }
 
-export default function UseRectangularZoom() {
+export default function UseDrawPath() {
   return (
     <PlotController>
-      <ZoomablePlot />
+      <DrawPathPlot />
     </PlotController>
   );
 }

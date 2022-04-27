@@ -1,19 +1,20 @@
 import React from 'react';
-
 import {
   Annotations,
   Heading,
   LineSeries,
   Plot,
   PlotController,
+  useAxisWheelZoom,
+  usePan,
   useRectangularZoom,
 } from 'react-plot';
 
-function ZoomablePlot() {
-  const zoom = useRectangularZoom();
+function WheelPlot() {
+  useAxisWheelZoom();
   return (
     <Plot width={300} height={300}>
-      <Heading title="Draw a rectangle" />
+      <Heading title="Scroll inside the plot" />
       <LineSeries
         data={[
           { x: 1, y: 1 },
@@ -23,15 +24,14 @@ function ZoomablePlot() {
           { x: 5, y: 1 },
         ]}
       />
-      <Annotations>{zoom.annotations}</Annotations>
     </Plot>
   );
 }
 
-export default function UseRectangularZoom() {
+export default function UseDrawRectangle() {
   return (
     <PlotController>
-      <ZoomablePlot />
+      <WheelPlot />
     </PlotController>
   );
 }

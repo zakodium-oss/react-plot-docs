@@ -1,9 +1,6 @@
 # Introduction
 
 import UseDrawRectangleDemo from './UseDrawRectangle.demo.tsx';
-import UseRectangularZoomDemo from './UseRectangularZoom.demo.tsx';
-import MultiRectangularZoom from './MultiRectangularZoom.demo.tsx';
-import UseAxisZoom from './UseAxisZoom.demo.tsx';
 
 <UseDrawRectangleDemo />
 
