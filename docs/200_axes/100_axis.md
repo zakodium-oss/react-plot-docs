@@ -27,7 +27,7 @@ Axis is a component that allow you to add different personalised axes in your Pl
 In a `Plot`, we cannot have two `Axis` in the same `position`
 
 **Example:**
-Adding two bottom axis in the same plot will throw the next error :<br/>
+Adding two bottom axis in the same plot will throw the following error :<br/>
 `Plot can only have one bottom axis`
 
 ## Props
