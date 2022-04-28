@@ -43,7 +43,7 @@ same as [Line](./300_otherShapes.md#line) with 2 more special props :
   default: `"none"`
 - **endPoint:** shape added to ending point<br />
   type: `'circle' | 'triangle' | 'line' | 'none'`<br/>
-  default: `"none"
+  default: `"none"`
 
 ## Polyline
 
