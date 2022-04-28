@@ -1,16 +1,18 @@
 # Filled shapes
 
 import FilledShapesDemo from './FilledShapes.demo.tsx';
-import Rectangle from './Rectangle.demo.tsx';
-import Circle from './Circle.demo.tsx';
-import Ellipse from './Ellipse.demo.tsx';
-import DirectedEllipse from './DirectedEllipse.demo.tsx';
+import RectangleDemo from './Rectangle.demo.tsx';
+import CircleDemo from './Circle.demo.tsx';
+import EllipseDemo from './Ellipse.demo.tsx';
+import DirectedEllipseDemo from './DirectedEllipse.demo.tsx';
+import PolygoneDemo from './Polygone.demo.tsx';
+import ShapeDemo from './Shape.demo.tsx';
 
 <FilledShapesDemo/>
 
 ## Rectangle
 
-<Rectangle/>
+<RectangleDemo/>
 
 ### Props
 
@@ -35,7 +37,7 @@ all `<rect>` svg props are supported for more information visit [the documentati
 
 ## Circle
 
-<Circle/>
+<CircleDemo/>
 
 ### Props
 
@@ -58,7 +60,7 @@ all `<circle>` svg props are supported for more information visit [the documenta
 
 ## Ellipse
 
-<Ellipse/>
+<EllipseDemo/>
 
 ### Props
 
@@ -83,7 +85,7 @@ all `<ellipse>` svg props are supported for more information visit [the document
 
 ## DirectedEllipse
 
-<DirectedEllipse/>
+<DirectedEllipseDemo/>
 
 ### Props
 
@@ -110,6 +112,8 @@ all `<ellipse>` svg props are supported for more information visit [the document
 
 ## Polygone
 
+<PolygoneDemo/>
+
 ### Props
 
 #### Mandatory
@@ -119,13 +123,15 @@ all `<ellipse>` svg props are supported for more information visit [the document
 
 #### Optional
 
-- **color:** content color<br />
+- **color:** fill color<br />
   type: `string`<br/>
   default: `"black"`
 
 all `<polygone>` svg props are supported for more information visit [the documentation](https://developer.mozilla.org/en-US/docs/Web/SVG/Element/polygone)
 
 ## Shape
+
+<ShapeDemo/>
 
 ### Props
 
@@ -142,10 +148,10 @@ all `<polygone>` svg props are supported for more information visit [the documen
 
 #### Optional
 
-- **color:** content color<br />
+- **color:** fill color<br />
   type: `string`<br/>
   default: `"black"`
-- **style:** customise shape style<br />
+- **style:** customise shape styling<br />
   type: `CSSProperties`<br/>
   default: `{}`
 - **onMouseEnter:** mouse enter event callback<br />
