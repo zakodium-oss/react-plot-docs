@@ -2,24 +2,8 @@ import React from 'react';
 import { Annotations, Annotation, Plot, Axis } from 'react-plot';
 export default function PlotAnnotations() {
   const Explication = [
-    <Annotation.Line
-      x1={3}
-      x2={3}
-      y1={2}
-      y2={2.05}
-      style={{ strokeWidth: '5px' }}
-      stroke-linecap="round"
-      color="red"
-    />,
-    <Annotation.Line
-      x1={7}
-      x2={7}
-      y1={7}
-      y2={7.05}
-      style={{ strokeWidth: '5px' }}
-      stroke-linecap="round"
-      color="red"
-    />,
+    <Annotation.Shape size={5} shape="circle" x={3} y={2} color="red" />,
+    <Annotation.Shape size={5} shape="circle" x={7} y={7} color="red" />,
     <Annotation.Text x={3} y={2.3} text-anchor="end">
       (x1,y1)
     </Annotation.Text>,
