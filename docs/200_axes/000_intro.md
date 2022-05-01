@@ -5,7 +5,7 @@ import AxesDemo from "./Axes.demo.tsx"
 
 Axes are one of the main component in `react-plot` <br/>
 
-There are currently 2 diffrent way to represent your Axes:
+There are currently 2 diffrent components to represent your Axes:
 
 - **[Axis](./100_axis.md)**
 - **[Parallel Axis](./200_parallelAxis.md)**
