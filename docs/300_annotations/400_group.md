@@ -31,6 +31,6 @@ import GroupAlign from './GroupAlign.demo.tsx';
   default: `none`
 - **verticalAlign:** change group vertical align<br />
   type: `'start' | 'middle' | 'end' | 'none'`<br/>
-  default: `none`
+  default: `'none'`
 
 <GroupAlign/>
