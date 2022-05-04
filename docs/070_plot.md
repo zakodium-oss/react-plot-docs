@@ -11,8 +11,8 @@ import PlotMargin from './plot/PlotMargin.demo.tsx';
 
 `Plot` children must be one of the following components :
 
-- all [Series](./100_series/000_intro.md) components
-- the 2 [Axes](./200_axes) components
+- [Series](./100_series/000_intro.md) components
+- [Axes](./200_axes/000_intro.md) components
 - [`Annotations`](./300_annotations/000_intro.md)
 - [`Heading`](./450_illusrations/100_heading.md)
 - [`Legend`](./450_illusrations/200_legend.md)
