@@ -19,13 +19,13 @@ import ShapeDemo from './Shape.demo.tsx';
 #### Mandatory
 
 - **x1:** first corner horizontal coordinate<br />
-  type: [`ScalarValue`](./000_intro.md)<br/>
+  type: [`ScalarValue`](../500_types/scalarValue.md)<br/>
 - **y1:** first corner vertical coordinate<br />
-  type: [`ScalarValue`](./000_intro.md)<br/>
+  type: [`ScalarValue`](../500_types/scalarValue.md)<br/>
 - **x2:** second corner horizontal coordinate<br />
-  type: [`ScalarValue`](./000_intro.md)<br/>
+  type: [`ScalarValue`](../500_types/scalarValue.md)<br/>
 - **y2:** second corner vertical coordinate<br />
-  type: [`ScalarValue`](./000_intro.md)<br/>
+  type: [`ScalarValue`](../500_types/scalarValue.md)<br/>
 
 #### Optional
 
@@ -44,11 +44,11 @@ all `<rect>` svg props are supported for more information visit [the documentati
 #### Mandatory
 
 - **x:** center horizontal coordinate<br />
-  type: [`ScalarValue`](./000_intro.md)<br/>
+  type: [`ScalarValue`](../500_types/scalarValue.md)<br/>
 - **y:** center vertical coordinate<br />
-  type: [`ScalarValue`](./000_intro.md)<br/>
+  type: [`ScalarValue`](../500_types/scalarValue.md)<br/>
 - **r:** circle radius<br />
-  type: [`ScalarValue`](./000_intro.md)<br/>
+  type: [`ScalarValue`](../500_types/scalarValue.md)<br/>
 
 #### Optional
 
@@ -67,13 +67,13 @@ all `<circle>` svg props are supported for more information visit [the documenta
 #### Mandatory
 
 - **x:** center horizontal coordinate<br />
-  type: [`ScalarValue`](./000_intro.md)<br/>
+  type: [`ScalarValue`](../500_types/scalarValue.md)<br/>
 - **y:** center vertical coordinate<br />
-  type: [`ScalarValue`](./000_intro.md)<br/>
+  type: [`ScalarValue`](../500_types/scalarValue.md)<br/>
 - **rx:** radius on the horizontal axis<br />
-  type: [`ScalarValue`](./000_intro.md)<br/>
+  type: [`ScalarValue`](../500_types/scalarValue.md)<br/>
 - **ry:** radius on the vertical axis<br />
-  type: [`ScalarValue`](./000_intro.md)<br/>
+  type: [`ScalarValue`](../500_types/scalarValue.md)<br/>
 
 #### Optional
 
@@ -92,15 +92,15 @@ all `<ellipse>` svg props are supported for more information visit [the document
 #### Mandatory
 
 - **x1:** first corner horizontal coordinate<br />
-  type: [`ScalarValue`](./000_intro.md)<br/>
+  type: [`ScalarValue`](../500_types/scalarValue.md)<br/>
 - **y1:** first corner vertical coordinate<br />
-  type: [`ScalarValue`](./000_intro.md)<br/>
+  type: [`ScalarValue`](../500_types/scalarValue.md)<br/>
 - **x2:** second corner horizontal coordinate<br />
-  type: [`ScalarValue`](./000_intro.md)<br/>
+  type: [`ScalarValue`](../500_types/scalarValue.md)<br/>
 - **y2:** second corner vertical coordinate<br />
-  type: [`ScalarValue`](./000_intro.md)<br/>
+  type: [`ScalarValue`](../500_types/scalarValue.md)<br/>
 - **width:** ellipse width<br />
-  type: [`ScalarValue`](./000_intro.md)<br/>
+  type: [`ScalarValue`](../500_types/scalarValue.md)<br/>
 
 #### Optional
 
@@ -138,9 +138,9 @@ all `<polygone>` svg props are supported for more information visit [the documen
 #### Mandatory
 
 - **x:** horizontal coordinate<br />
-  type: [`ScalarValue`](./000_intro.md)<br/>
+  type: [`ScalarValue`](../500_types/scalarValue.md)<br/>
 - **y:** vertical coordinate<br />
-  type: [`ScalarValue`](./000_intro.md)<br/>
+  type: [`ScalarValue`](../500_types/scalarValue.md)<br/>
 - **size:** shape size<br />
   type: `number`<br/>
 - **shape:** shape name<br />

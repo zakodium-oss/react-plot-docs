@@ -9,7 +9,7 @@ import RangeSeriesLines from './rangeSeries/RangeSeriesLines.demo.tsx';
 
 ## Data
 
-point type must extand from **[SeriesPoint](./000_intro.md/#data)**
+point type must extand from **[`RangeSeriesPoint`](../500_types/data.md#2-rangeseriespoint)**
 
 ## Props
 

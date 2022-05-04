@@ -12,7 +12,7 @@ import BarSeriesLines from './barSeries/BarSeriesLines.demo.tsx';
 
 ## Data
 
-point type must extand from **[SeriesPoint](./000_intro.md/#data)**
+point type must extand from **[`SeriesPoint`](../500_types/data.md#1-seriespoint)**
 
 ## Props
 

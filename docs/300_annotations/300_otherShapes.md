@@ -16,13 +16,13 @@ import PolylineDemo from './Polyline.demo.tsx';
 #### Mandatory
 
 - **x1:** start point horizontal coordinate<br />
-  type: [`ScalarValue`](./000_intro.md)<br/>
+  type: [`ScalarValue`](../500_types/scalarValue.md)<br/>
 - **y1:** start point vertical coordinate<br />
-  type: [`ScalarValue`](./000_intro.md)<br/>
+  type: [`ScalarValue`](../500_types/scalarValue.md)<br/>
 - **x2:** end point horizontal coordinate<br />
-  type: [`ScalarValue`](./000_intro.md)<br/>
+  type: [`ScalarValue`](../500_types/scalarValue.md)<br/>
 - **y2:** end point vertical coordinate<br />
-  type: [`ScalarValue`](./000_intro.md)<br/>
+  type: [`ScalarValue`](../500_types/scalarValue.md)<br/>
 
 #### Optional
 
