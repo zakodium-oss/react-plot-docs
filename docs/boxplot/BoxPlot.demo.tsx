@@ -8,7 +8,7 @@ import {
 } from 'react-plot';
 import { ScatterSeries, Axis } from 'react-plot';
 
-import random from 'random/dist/cjs';
+import random from 'random';
 
 import { median, quartiles, max, min } from 'ml-stat/array';
 
