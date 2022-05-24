@@ -13,13 +13,14 @@ export default function BoxPlotExample() {
   // dynamically generate some normally distributed data about the arbritrary value of 300
   const seed1 = 2359;
   const seed2 = 787486;
+  const numPoints = 100;
 
   const data = createRandomArray({
     distribution: 'normal',
     seed: seed1,
     mean: 300,
     standardDeviation: 100,
-    length: 50,
+    length: numPoints,
   });
 
   const jitter = createRandomArray({
@@ -27,7 +28,7 @@ export default function BoxPlotExample() {
     seed: seed2,
     mean: 0,
     standardDeviation: 0.1,
-    length: 50,
+    length: numPoints,
   });
 
   var points: SeriesPoint[] = [];
