@@ -10,6 +10,7 @@ a bloxplot superimposed on a scatter plot of the dataset.
 ## Props
 
 ### Mandatory
+
 - **min:** Minumum value in the dataset<br/>
   type: `ScalarValue` <br/>
 - **max:** Maximum value in the dataset<br/>
@@ -26,6 +27,7 @@ a bloxplot superimposed on a scatter plot of the dataset.
   type: `ScalarValue` <br/>
 
 ### Optional
+
 - **xAxis?:** The xAxis<br/>
   type: `string`<br/>
   default: `x`
