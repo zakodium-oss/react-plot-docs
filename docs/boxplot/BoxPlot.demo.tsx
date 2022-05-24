@@ -41,9 +41,9 @@ export default function BoxPlotExample() {
   const props: AnnotationBoxPlotProps = {
     max: boxPlotStats.max,
     min: boxPlotStats.min,
-    q1: boxPlotStats.q3,
+    q1: boxPlotStats.q1,
     median: boxPlotStats.median,
-    q3: boxPlotStats.q1,
+    q3: boxPlotStats.q3,
     width: 1.0,
     y: 0,
     xAxis: 'y',
