@@ -7,28 +7,42 @@ import {
   SeriesPoint,
 } from 'react-plot';
 import { ScatterSeries, Axis } from 'react-plot';
-
-import random from 'random';
-
-import { median, quartiles, max, min } from 'ml-stat/array';
+import { xBoxPlot, createRandomArray } from 'ml-spectra-processing';
 
 export default function BoxPlotExample() {
-  // dynamically generate some normally distributed data about the arbritary value of 300
-  const generator = random.normal(300, 100);
-  const jitter = random.normal(0, 0.1);
-  const data: number[] = new Array(50).fill(null).map((_, i) => generator());
-  const points: SeriesPoint[] = data.map((value) => {
-    return { x: jitter(), y: value };
+  // dynamically generate some normally distributed data about the arbritrary value of 300
+  const seed1 = 2359;
+  const seed2 = 787486;
+
+  const data = createRandomArray({
+    distribution: 'normal',
+    seed: seed1,
+    mean: 300,
+    standardDeviation: 100,
+    length: 50,
   });
 
-  const quarts = quartiles(data);
+  const jitter = createRandomArray({
+    distribution: 'normal',
+    seed: seed2,
+    mean: 0,
+    standardDeviation: 0.1,
+    length: 50,
+  });
+
+  var points: SeriesPoint[] = [];
+  data.forEach((value, i) => {
+    points.push({ x: jitter[i], y: value });
+  });
+
+  const boxPlotStats = xBoxPlot(data);
 
   const props: AnnotationBoxPlotProps = {
-    max: max(data),
-    min: min(data),
-    q1: quarts.q3,
-    median: median(data),
-    q3: quarts.q1,
+    max: boxPlotStats.max,
+    min: boxPlotStats.min,
+    q1: boxPlotStats.q3,
+    median: boxPlotStats.median,
+    q3: boxPlotStats.q1,
     width: 1.0,
     y: 0,
     xAxis: 'y',
