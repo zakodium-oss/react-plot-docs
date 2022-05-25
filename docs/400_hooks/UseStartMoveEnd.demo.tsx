@@ -5,8 +5,10 @@ import { LineSeries, Plot, PlotController, useStartMoveEnd } from 'react-plot';
 import { TrackingResult } from 'react-plot/lib-esm/components/Tracking';
 
 function TrackablePlot() {
-  const [currentEvent, setCurrentEvent] =
-    useState<{ kind: string; event: TrackingResult }>();
+  const [currentEvent, setCurrentEvent] = useState<{
+    kind: string;
+    event: TrackingResult;
+  }>();
   useStartMoveEnd({
     onStart: (event) => {
       setCurrentEvent({ kind: 'onStart', event });
