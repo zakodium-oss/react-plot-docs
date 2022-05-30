@@ -13,7 +13,7 @@ function PanPlot() {
   usePan();
   return (
     <Plot width={300} height={300}>
-      <Heading title="Press SHIFT & Grab and drag" />
+      <Heading title="Press ALT, Grab and drag" />
       <LineSeries
         data={[
           { x: 1, y: 1 },
