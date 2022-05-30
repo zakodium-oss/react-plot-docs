@@ -9,7 +9,6 @@ import UseCrossHairDemo from './UseCrossHair.demo.tsx'
 
 These hooks allow you to do specific precoded functionalities.
 
-
 Currently we support following functional hooks:
 
 - **[useAxisZoom](./300_functional.md#useaxiszoom)**

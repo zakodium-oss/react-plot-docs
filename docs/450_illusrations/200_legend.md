@@ -30,7 +30,7 @@ import LegendOffset from './LegendOffset.demo.tsx';
 
   <LegendMargin/>
 
-- **onClick:** Creates a callback when clicking to one of legend elements, event: MouseEvent data, id: id of clicked serie <br /> 
+- **onClick:** Creates a callback when clicking to one of legend elements, event: MouseEvent data, id: id of clicked serie <br />
   type: `(args: {event: React.MouseEvent<SVGGElement, MouseEvent>;id: string;}) => void`<br/>
 
 - **labelStyle:** changes legend style in general or for specific serie's label<br />

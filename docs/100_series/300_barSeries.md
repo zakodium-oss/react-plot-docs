@@ -38,7 +38,7 @@ They also have other props that we can class into the following categories :
 
 ### 2. Point Label
 
-- **pointLabel:** serie's point label that can be static or dynamic depending on kind of  points<br />
+- **pointLabel:** serie's point label that can be static or dynamic depending on kind of points<br />
   type: `LabelFuncProps<point>`<br/>
   default: `''`
 - **pointLabelStyle:** serie's point label style, static or dynamic depending on kind of points<br />
