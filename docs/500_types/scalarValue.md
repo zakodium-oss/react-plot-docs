@@ -6,7 +6,7 @@ import ScalarValuePourcentage from "./ScalarValuePourcentage.demo.tsx"
 
 This type is mainly used to allow more possibilities and ways to enter props
 
-We currently allow the following three types :
+We currently allow following three types :
 
 ## 1. Number
 

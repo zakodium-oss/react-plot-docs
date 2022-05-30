@@ -2,9 +2,9 @@
 
 import IllustrationsDemo from './Illustrations.demo.tsx';
 
-This categorie used to imporve, explaine the `Plot`
+This category is used to improve, explaine the `Plot`
 
-currently we support the following illusrations:
+Currently we support following illusrations:
 
 - **[Heading](./100_heading.md)**
 - **[Legend](./200_legend.md)**

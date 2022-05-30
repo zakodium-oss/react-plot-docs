@@ -12,25 +12,25 @@ import BarSeriesLines from './barSeries/BarSeriesLines.demo.tsx';
 
 ## Data
 
-point type must extand from **[`SeriesPoint`](../500_types/data.md#1-seriespoint)**
+point type must extend from **[`SeriesPoint`](../500_types/data.md#1-seriespoint)**
 
 ## Props
 
-Like all other series, scatter series have **[Base props](./000_intro.md/#base-props)**<br/>
-They also have many other props that we can class into the following categories :
+Like all other series, bar series have **[Base props](./000_intro.md/#base-props)**<br/>
+They also have other props that we can class into the following categories :
 
 ### 1. Markers
 
-- **displayMarkers:** display scatter points markers<br />
+- **displayMarkers:** displays scatter points markers<br />
   type: `boolean`<br/>
   default: `true`
 - **markerShape:** serie's markers shape<br />
   type: `Shape`<br/>
   default: `'circle'`
-- **markerSize:** serie's markers size<br />
+- **markerSize:** changes size of serie's markers<br />
   type: `number`<br/>
   default: `8`
-- **markerStyle:** serie's markers style that can be dynamique or statique<br />
+- **markerStyle:**changes style of serie's markers. Can be dynamic or static<br />
   type: `CSSFuncProps`<br/>
   default: `{}`
 
@@ -38,10 +38,10 @@ They also have many other props that we can class into the following categories 
 
 ### 2. Point Label
 
-- **pointLabel:** serie's point label that can be statique or dynamique depending points<br />
+- **pointLabel:** serie's point label that can be static or dynamic depending on kind of  points<br />
   type: `LabelFuncProps<point>`<br/>
   default: `''`
-- **pointLabelStyle:** serie's point label style, statique or dynamique depending points<br />
+- **pointLabelStyle:** serie's point label style, static or dynamic depending on kind of points<br />
   type: `CSSFuncProps<point>`<br/>
   default: `{}`
 
@@ -49,21 +49,21 @@ They also have many other props that we can class into the following categories 
 
 ### 3. ErrorBars
 
-- **displayErrorBars:** display errors bars in the serie<br />
+- **displayErrorBars:** displays error bars in the series<br />
   type: `boolean`<br/>
   default: `false`
-- **errorBarsStyle:** change error bars style<br />
+- **errorBarsStyle:** changes error bars style<br />
   type: `SVGAttributes<SVGLineElement>`<br/>
-- **errorBarsCapSize:** size of error bars cap<br />
+- **errorBarsCapSize:** changes size of error bars cap<br />
   type: `number`<br/>
-- **errorBarsCapStyle:** change error bars cap's style<br />
+- **errorBarsCapStyle:** changes error bars cap's style<br />
   type: `SVGAttributes<SVGLineElement>`<br/>
 
 <BarSeriesError/>
 
 ### 4. Lines
 
-- **lineStyle:** styling of the serie's path statique or dynamique that depend series id<br />
+- **lineStyle:** styling of the serie's path static or dynamic that depends on series id<br />
   type: `CSSFuncProps<{id}>`<br/>
   default: `false`
 

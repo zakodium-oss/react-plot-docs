@@ -18,14 +18,14 @@ ParallelAxis is a component used to create a parallel axis to an existed **[Axis
 
 ### 1. Identify Axis
 
-- **id:** mandoraty prop that specifie the base axis<br/>
+- **id:** mandatory prop that specifies the base axis<br/>
   type: `string`<br/>
 
   <AxisId />
 
 ### 2. Choose Axis Behaviour
 
-- **hidden:** Hide all axis elements<br />
+- **hidden:** Hides all axis elements<br />
   type: `boolean`<br/>
   default: `false`
 
@@ -35,10 +35,10 @@ ParallelAxis is a component used to create a parallel axis to an existed **[Axis
 
 #### a. Line
 
-- **hiddenLine:** Hide axis line<br />
+- **hiddenLine:** Hides axis line<br />
   type: `boolean`<br/>
   default: `false`
-- **lineStyle:** change line style<br />
+- **lineStyle:** changes line style<br />
   type: `CSSProperties`<br/>
   default: `{}`
 
@@ -46,10 +46,10 @@ ParallelAxis is a component used to create a parallel axis to an existed **[Axis
 
 #### b. Label
 
-- **label:** Axis label<br />
+- **label:** labels Axis<br />
   type: `ReactNode`<br/>
   default: `""`
-- **labelStyle:** change label style<br />
+- **labelStyle:** changes label style<br />
   type: `CSSProperties`<br/>
   default: `{}`
 
@@ -57,31 +57,31 @@ ParallelAxis is a component used to create a parallel axis to an existed **[Axis
 
 #### c. Ticks
 
-- **hiddenTicks:** Hide axis ticks<br />
+- **hiddenTicks:** Hides axis ticks<br />
   type: `boolean`<br/>
   default: `false`
 
   <AxisTicksHidden/>
 
-- **tickPosition:** change ticks position<br />
+- **tickPosition:** changes ticks position<br />
   type: `'inner' | 'outer' | 'center'`<br/>
   default: `'center'`
 
   <AxisTicksPosition/>
 
-- **primaryTickLength:** change primary ticks length<br />
+- **primaryTickLength:** changes primary ticks length<br />
   type: `number`<br/>
   default: `5`
-- **primaryTickStyle:** customise primary ticks style<br />
+- **primaryTickStyle:** customises primary ticks style<br />
   type: `CSSProperties`<br/>
   default: `{}`
 
   <AxisTicksPrimary/>
 
-- **secondaryTickLength:** change secondary ticks length<br />
+- **secondaryTickLength:** changes secondary ticks length<br />
   type: `number`<br/>
   default: `3`
-- **secondaryTickStyle:** customise secondary ticks style<br />
+- **secondaryTickStyle:** customises secondary ticks style<br />
   type: `CSSProperties`<br/>
   default: `{}`
 
@@ -89,10 +89,10 @@ ParallelAxis is a component used to create a parallel axis to an existed **[Axis
 
 #### d. Ticks labels
 
-- **tickLabelFormat:** personlise the format of tick labels<br />
+- **tickLabelFormat:** personnalises the format of tick labels<br />
   type: `(x: number)=>string`<br/>
   default: `d3's smart tickFormat for time scale, String for others`
-- **tickLabelStyle:** change tick labels style<br />
+- **tickLabelStyle:** changes tick labels style<br />
   type: `CSSProperties`<br/>
   default: `{}`
 

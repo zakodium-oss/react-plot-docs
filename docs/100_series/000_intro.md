@@ -2,7 +2,7 @@
 
 import SeriesDemo from './Series.demo.tsx';
 
-There are currently 5 different kind of series that can be added in a plot:
+There are currently 5 different types of series that can be added to a plot:
 
 - **[ScatterSeries](./100_scatterSeries.md)**
 - **[LineSeries](./200_lineSeries.md)**
@@ -10,20 +10,20 @@ There are currently 5 different kind of series that can be added in a plot:
 - **[FunctionSeries](./400_functionSeries.md)**
 - **[RangeSeries](./500_rangeSeries.md)**
 
-Series are direct children of the `Plot` component and you may have as many Series as you which on the same plot.
+Series are direct children of the `Plot` component and you may have as many Series as you wish on the same plot.
 
 ## Data
 
-The main purpose of `react-plot` is displaying different data in many ways.
-Data is an array of points that differ from serie to another
+The main purpose of `react-plot` is to display different data in different ways.
+Data is an array of points that differ from one serie to another
 
 ## Base Props
 
-They are the props that all series have:
+Base props are the props that all series have:
 
 #### <u>Mandatory</u>
 
-- **data:** displayed serie's data<br/>
+- **data:** displays serie's data<br/>
   type: [`Data`](../500_types/data.md)
 
 #### <u>Optional</u>
@@ -39,13 +39,13 @@ They are the props that all series have:
   default: `"y"`
 - **label:** label of the serie that can be displayed in legends<br />
   type: `string`<br/>
-- **hidden:** hide serie<br />
+- **hidden:** hides serie<br />
   type: `boolean`<br/>
   default: `false`
-- **xShift:** "number or string"<br />
+- **xShift:** shifts the data relative to horizontal axis<br />
   type: `number or string`<br/>
   default: `0`
-- **yShift:** "number or string"<br />
+- **yShift:** shifts the data relative to vertical axis<br />
   type: `number or string`<br/>
   default: `0`
 

@@ -2,7 +2,7 @@
 
 import AnnotationsDemo from './Annotations.demo.tsx';
 
-`react-plot` allows adding several elements to our plot, which help us to visualize more data, simplify it, add interaction with the plot...
+`react-plot` allows adding several elements to our plot, which helps us to visualize more data, simplify it, add interaction with the plot...
 
 <AnnotationsDemo />
 
@@ -13,7 +13,7 @@ Annotations must be inside the `Annotation` component, they cannot be placed dir
 
 ## Annotations
 
-There is 3 categories each one may containe many annotions :
+There is 3 categories each one may contain many annotations :
 
 - **[Text](./100_text.md)**
 - **[Filled shapes](./200_filledShapes.md)**

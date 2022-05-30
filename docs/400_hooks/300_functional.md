@@ -7,9 +7,10 @@ import UseAxisWheelZoom from './UseAxisWheelZoom.demo.tsx'
 import UsePanDemo from './UsePan.demo.tsx'
 import UseCrossHairDemo from './UseCrossHair.demo.tsx'
 
-These hooks allows you to do a specific precodeed functionalities
+These hooks allow you to do specific precoded functionalities.
 
-currently we support the following functional hooks:
+
+Currently we support following functional hooks:
 
 - **[useAxisZoom](./300_functional.md#useaxiszoom)**
 - **[useRectangularZoom](./300_functional.md#userectangularzoom)**
@@ -19,7 +20,7 @@ currently we support the following functional hooks:
 
 ## useAxisZoom
 
-This hook allows to zoom in a plot along the specified axis (default to horitzontal) while drawing a rectangle. There are 3 steps in order ot implement the zoom:
+This hook allows to zoom in a plot along the specified axis (default to horitzontal) while drawing a rectangle. There are 3 steps in order to implement the zoom:
 
 - wrap your plot component in `<PlotController>`
 - add the hook: `const zoom = useAxisZoom({direction:'horizontal'});`
@@ -31,7 +32,7 @@ This hook also implements the `double click` detection to reset the zoom to its 
 
 ## useRectangularZoom
 
-This hook allows directly to manage the zoom in a plot. There are 3 steps in order ot implement the zoom:
+This hook allows to directly manage the zoom in a plot. There are 3 steps in order to implement the zoom:
 
 - wrap your plot component in `<PlotController>`
 - add the hook: `const zoom = useRectangularZoom();`
@@ -41,7 +42,7 @@ This hook also implements the `double click` detection to reset the zoom to its 
 
 <UseRectangularZoomDemo />
 
-If a `PlotController` contains many `Plot` the change will be applied on all of them.
+If a `PlotController` contains several `Plot` elements, the change will be applied on all of them.
 
 <MultiRectangularZoom />
 
@@ -49,17 +50,17 @@ If a `PlotController` contains many `Plot` the change will be applied on all of 
 
 This hook allows to zoom in a plot along the specified axis (default to vertical) using mouse wheel.
 
-The hook may be customized with the following props:
+The hook may be customized with following props:
 
-- **center** : it define zoom center, used to choose a specific point or the mouse cursor `"pointer"` as zoom center<br/>
+- **center** : it defines zoom center, used to choose a specific point or the mouse cursor `"pointer"` as zoom center<br/>
   type : `number | "pointer"`<br/>
   default : `0`
 
-- **factor** : control zoom speed<br/>
+- **factor** : controls zoom speed<br/>
   type : `number`<br/>
   default : `"0"`
 
-- **invert** : invert wheel zooming (default wheel up will zoom in our plot)<br/>
+- **invert** : inverts wheel zooming (default wheel up will zoom in our plot)<br/>
   type : `string`<br/>
   default : `false`
 
@@ -81,19 +82,19 @@ The hook may be customized with the following props:
   type : `string`<br/>
   default : `"black"`
 
-- **lineStyle** : add style to crossHair line<br/>
+- **lineStyle** : adds style to crossHair line<br/>
   type : `CSSProperties`<br/>
   default : `{}`
 
-- **textStyle** : add style to crossHair text<br/>
+- **textStyle** : adds style to crossHair text<br/>
   type : `CSSProperties`<br/>
   default : `{}`
 
-- **textTransform** : trasform crossHair text<br/>
+- **textTransform** : trasforms crossHair text<br/>
   type : `string`<br/>
   default : `""`
 
-There are 3 steps in order ot implement the crossHair:
+There are 3 steps in order to implement the crossHair:
 
 - wrap your plot component in `<PlotController>`
 - add the hook: `const crossHair = useCrossHair();`
@@ -103,7 +104,7 @@ There are 3 steps in order ot implement the crossHair:
 
 ## usePan
 
-This hook adds an interactive pan to the plot to move in all direction while holding `SHIFT`. There are 2 steps in order ot implement the pan:
+This hook adds an interactive pan to the plot to move in any direction while holding `SHIFT`. There are 2 steps in order to implement the pan:
 
 - wrap your plot component in `<PlotController>`
 - add the hook: `usePan();`

@@ -5,7 +5,7 @@ import UsePlotControllerAxes from './UsePlotControllerAxes.demo.tsx';
 
 Low level hooks used by other hooks but can also be used natively.
 
-currently we support the following basic hooks:
+Currently we support following basic hooks:
 
 - **[useStartMoveEnd](./100_basic.md#usestartmoveend)**
 - **[usePlotControllerAxes](./100_basic.md#useplotcontrolleraxes)**
@@ -20,7 +20,7 @@ It accepts 3 callbacks:
 - onMove: the mouse was dragged
 - onEnd: the mouse was released
 
-In the following example we simply log the different events.
+In the following example we simply log different events.
 
 <UseStartMoveEndDemo />
 

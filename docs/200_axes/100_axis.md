@@ -18,7 +18,7 @@ import AxisTicksPrimary from './axis/AxisTicksPrimary.demo.tsx'
 import AxisTicksSecondary from './axis/AxisTicksSecondary.demo.tsx'
 import AxisTicksLabel from './axis/AxisTicksLabel.demo.tsx'
 
-Axis is a component that allow you to add different personalised axes in your Plot
+Axis is a component that allows you to add different personalised axes in your Plot
 
 <AxisDemo/>
 
@@ -27,14 +27,14 @@ Axis is a component that allow you to add different personalised axes in your Pl
 In a `Plot`, we cannot have two `Axis` in the same `position`
 
 **Example:**
-Adding two bottom axis in the same plot will throw the following error :<br/>
+Adding two bottom axes in the same plot will throw the following error :<br/>
 `Plot can only have one bottom axis`
 
 ## Props
 
 ### 1. Axis Positon
 
-- **position:** mandatory prop that allow you to choose axis position<br/>
+- **position:**a mandatory prop that allows you to choose axis position<br/>
   type: `'top' | 'bottom' | 'left' | 'right'`
 
 <AxisPosition/>
@@ -83,20 +83,20 @@ Adding two bottom axis in the same plot will throw the following error :<br/>
 
   <AxisFlip/>
 
-- **hidden:** Hide all axis elements<br />
+- **hidden:** Hides all axis elements<br />
   type: `boolean`<br/>
   default: `false`
 
   <AxisHidden/>
 
-### 5. Personlise Axis
+### 5. Personnalise Axis
 
 #### a. Line
 
-- **hiddenLine:** Hide axis line<br />
+- **hiddenLine:** hides axis line<br />
   type: `boolean`<br/>
   default: `false`
-- **lineStyle:** change line style<br />
+- **lineStyle:** changes axis line style<br />
   type: `CSSProperties`<br/>
   default: `{}`
 
@@ -107,7 +107,7 @@ Adding two bottom axis in the same plot will throw the following error :<br/>
 - **label:** Axis label<br />
   type: `ReactNode`<br/>
   default: `""`
-- **labelStyle:** change label style<br />
+- **labelStyle:** changes label style<br />
   type: `CSSProperties`<br/>
   default: `{}`
 
@@ -115,17 +115,17 @@ Adding two bottom axis in the same plot will throw the following error :<br/>
 
 #### c. Grid
 
-- **displayPrimaryGridLines:** add simple grid lines to the plot<br />
+- **displayPrimaryGridLines:** adds simple grid lines to the plot<br />
   type: `boolean`<br/>
   default: `false`
-- **primaryGridLineStyle:** customise grid lines style<br />
+- **primaryGridLineStyle:** customises grid lines style<br />
   type: `CSSProperties`<br/>
   default: `{}`
 
-- **displaySecondaryGridLines:** add secondary grid lines to the plot<br />
+- **displaySecondaryGridLines:** adds secondary grid lines to the plot<br />
   type: `boolean`<br/>
   default: `false`
-- **secondaryGridLineStyle:** change secondary grid lines style<br />
+- **secondaryGridLineStyle:** changes secondary style of grid lines<br />
   type: `CSSProperties`<br/>
   default: `{}`
 
@@ -133,31 +133,31 @@ Adding two bottom axis in the same plot will throw the following error :<br/>
 
 #### d. Ticks
 
-- **hiddenTicks:** Hide axis ticks<br />
+- **hiddenTicks:** Hides axis ticks<br />
   type: `boolean`<br/>
   default: `false`
 
   <AxisTicksHidden/>
 
-- **tickPosition:** change ticks position<br />
+- **tickPosition:** changes ticks position<br />
   type: `'inner' | 'outer' | 'center'`<br/>
   default: `'center'`
 
   <AxisTicksPosition/>
 
-- **primaryTickLength:** change primary ticks length<br />
+- **primaryTickLength:** changes primary ticks length<br />
   type: `number`<br/>
   default: `5`
-- **primaryTickStyle:** customise primary ticks style<br />
+- **primaryTickStyle:** customises primary ticks style<br />
   type: `CSSProperties`<br/>
   default: `{}`
 
   <AxisTicksPrimary/>
 
-- **secondaryTickLength:** change secondary ticks length<br />
+- **secondaryTickLength:** changes secondary ticks length<br />
   type: `number`<br/>
   default: `3`
-- **secondaryTickStyle:** customise secondary ticks style<br />
+- **secondaryTickStyle:** customises secondary ticks style<br />
   type: `CSSProperties`<br/>
   default: `{}`
 
@@ -165,10 +165,10 @@ Adding two bottom axis in the same plot will throw the following error :<br/>
 
 #### e. Ticks labels
 
-- **tickLabelFormat:** personlise the format of tick labels<br />
+- **tickLabelFormat:** personnalises the format of tick labels<br />
   type: `(x: number)=>string`<br/>
   default: `d3's smart tickFormat for time scale, String for others`
-- **tickLabelStyle:** change tick labels style<br />
+- **tickLabelStyle:** changes tick labels style<br />
   type: `CSSProperties`<br/>
   default: `{}`
 
