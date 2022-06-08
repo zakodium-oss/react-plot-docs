@@ -13,7 +13,7 @@ Annotations must be inside the `Annotation` component, they cannot be placed dir
 
 ## Annotations
 
-There is 3 categories each one may contain many annotations :
+There are 3 categories each one may contain many annotations :
 
 - **[Text](./100_text.md)**
 - **[Filled shapes](./200_filledShapes.md)**

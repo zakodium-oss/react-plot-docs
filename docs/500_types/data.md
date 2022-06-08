@@ -34,7 +34,7 @@ This type is used in :
 
 **In typescript :** `Array<{x:number,y1:number,y2:number}>`<br/>
 
-**Explication :** Array of points, each point must have three coordinates as a `number`, x for horizantal [Axis](../200_axes/000_intro.md) and y1,y2 to specify the range for vertical [Axis](../200_axes/000_intro.md)<br/>
+**Explication :** Array of points, each point must have three coordinates as a `number`, x for horizontal [Axis](../200_axes/000_intro.md) and y1,y2 to specify the range for vertical [Axis](../200_axes/000_intro.md)<br/>
 **Example :**
 `[ { x: 1, y1: 0, y2: 2 }, { x: 2, y1: 2, y2: 3 }, { x: 3, y1: 3, y2: 4 } ]`
 

@@ -22,7 +22,7 @@ There are 3 steps in order ot implement the draw rectangle:
 
 ## useDrawPath
 
-There are 3 steps in order ot implement the draw path:
+There are 3 steps in order to implement the draw path:
 
 - wrap your plot component in `<PlotController>`
 - add the hook: `const drawPath = useDrawPath();`

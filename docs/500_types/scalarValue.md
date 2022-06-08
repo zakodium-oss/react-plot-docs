@@ -49,7 +49,7 @@ The value is in pixels, independent from scale and [Axis](../200_axes/000_intro.
 
 ### Utilities
 
-The value is converted depeding [Axis](../200_axes/000_intro.md) domain
+The value is converted depending on [Axis](../200_axes/000_intro.md) domain
 
 ### Examples
 

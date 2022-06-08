@@ -34,25 +34,25 @@ a bloxplot superimposed on a scatter plot of the dataset.
 - **yAxis?:** The yAxis<br/>
   type: `string`<br/>
   default: `y`
-- **medianColor?:** Colour name of the median line<br/>
+- **medianColor?:** Color name of the median line<br/>
   type: `string`<br/>
   default: `black`
 - **medianStyle?:** CSS properties of the median line<br/>
   type: `CSSProperties`<br/>
   default: `{}`
-- **boxColor?:** Colour name of the box<br/>
+- **boxColor?:** Color name of the box<br/>
   type: `string`<br/>
   default: `black`
 - **boxStyle?:** CSS Properties of the box<br/>
   type: `CSSProperties`<br/>
   default: `{}`
-- **whiskerColor?:** Colour name of the whisker lines<br/>
+- **whiskerColor?:** Color name of the whisker lines<br/>
   type: `string`<br/>
   default: `black`
 - **whiskerStyle?:** CSS Properties of the whisker lines<br/>
   type: `CSSProperties`<br/>
   default: `{}`
-- **minMaxColor?:** Colour name of the min/max lines<br/>
+- **minMaxColor?:** Color name of the min/max lines<br/>
   type: `string`<br/>
   default: `black`
 - **minMaxStyle?:** CSS Properties of the min/max lines<br/>

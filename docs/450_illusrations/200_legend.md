@@ -7,13 +7,13 @@ import LegendOnClick from './LegendOnClick.demo.tsx';
 import LegendShowHide from './LegendShowHide.demo.tsx';
 import LegendOffset from './LegendOffset.demo.tsx';
 
-`Legend` is an component that describes each of [`Series`](../100_series/000_intro.md) of the `Plot`, it's also used to make interaction with them.
+`Legend` is an component that describes each of [`Series`](../100_series/000_intro.md) of the `Plot`, it's also used to interact with them.
 
 <LegendDemo/>
 
 ## Restriction
 
-- In order to add a `Serie` in `Legend` you must specify it `label`
+- In order to add a `Serie` in `Legend` you must specify its `label`
 - It's not possible to set `top` and `bottom`, `left` and `right` offsets at the same time
 
 ## Props
@@ -30,7 +30,7 @@ import LegendOffset from './LegendOffset.demo.tsx';
 
   <LegendMargin/>
 
-- **onClick:** Creates a callback when clicking to one of legend elements, event: MouseEvent data, id: id of clicked serie <br />
+- **onClick:** Creates a callback when clicking to one of legend's elements, event: MouseEvent data, id: id of clicked serie <br />
   type: `(args: {event: React.MouseEvent<SVGGElement, MouseEvent>;id: string;}) => void`<br/>
 
 - **labelStyle:** changes legend style in general or for specific serie's label<br />
@@ -48,13 +48,13 @@ import LegendOffset from './LegendOffset.demo.tsx';
 
   <LegendShowHide/>
 
-- **top** changes top legend offset that cannot defined with `bottom`<br />
+- **top** changes top legend offset that cannot be defined with `bottom`<br />
   type: `number`<br/>
-- **bottom** changes bottom legend offset that cannot defined with `top`<br />
+- **bottom** changes bottom legend offset that be cannot defined with `top`<br />
   type: `number`<br/>
-- **left** changes top legend offset that cannot defined with `right`<br />
+- **left** changes top legend offset that cannot be defined with `right`<br />
   type: `number`<br/>
-- **right** changes top legend offset that cannot defined with `left`<br />
+- **right** changes top legend offset that cannot be defined with `left`<br />
   type: `number`<br/>
 
   <LegendOffset/>
