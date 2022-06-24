@@ -1,4 +1,4 @@
-# Fonctional
+# Functional
 
 import UseRectangularZoomDemo from './UseRectangularZoom.demo.tsx';
 import MultiRectangularZoom from './MultiRectangularZoom.demo.tsx';
