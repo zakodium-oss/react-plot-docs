@@ -12,7 +12,7 @@ import ScatterSeriesLines from './scatterSeries/ScatterSeriesLines.demo.tsx';
 
 ## Data
 
-point type must extand from **[`SeriesPoint`](../500_types/data.md#1-seriespoint)**
+point type must extend from **[`SeriesPoint`](../500_types/data.md#1-seriespoint)**
 
 ## Props
 
@@ -23,13 +23,13 @@ Like all other series, scatter series have **[Base props](./000_intro.md/#base-p
 - **displayMarkers:** display scatter points markers<br />
   type: `boolean`<br/>
   default: `true`
-- **markerShape:** serie's markers shape that can be dynamique or statique<br />
+- **markerShape:** serie's shape of a marker.Can be dynamic or static<br />
   type: `ShapeFuncProps`<br/>
   default: `'circle'`
-- **markerSize:** serie's markers size<br />
+- **markerSize:** serie's size of a marker<br />
   type: `number`<br/>
   default: `8`
-- **markerStyle:** serie's markers style that can be dynamique or statique<br />
+- **markerStyle:** serie's markers style that can be dynamic or static<br />
   type: `CSSFuncProps`<br/>
   default: `{}`
 
@@ -37,10 +37,10 @@ Like all other series, scatter series have **[Base props](./000_intro.md/#base-p
 
 ### 2. Point Label
 
-- **pointLabel:** serie's point label (statique / dynamique)<br />
+- **pointLabel:** serie's point label (static / dynamic)<br />
   type: `LabelFuncProps`<br/>
   default: `''`
-- **pointLabelStyle:** serie's point label style (statique / dynamique)<br />
+- **pointLabelStyle:** serie's point label style (static / dynamic)<br />
   type: `CSSFuncProps`<br/>
   default: `{}`
 
@@ -48,14 +48,14 @@ Like all other series, scatter series have **[Base props](./000_intro.md/#base-p
 
 ### 3. ErrorBars
 
-- **displayErrorBars:** display errors bars in the serie<br />
+- **displayErrorBars:** displays error bars in the serie<br />
   type: `boolean`<br/>
   default: `false`
-- **errorBarsStyle:** change error bars style<br />
+- **errorBarsStyle:** changes error bars style<br />
   type: `SVGAttributes<SVGLineElement>`<br/>
-- **errorBarsCapSize:** size of error bars cap<br />
+- **errorBarsCapSize:** size of error bars' cap<br />
   type: `number`<br/>
-- **errorBarsCapStyle:** change error bars cap's style<br />
+- **errorBarsCapStyle:** changes error bars' cap style<br />
   type: `SVGAttributes<SVGLineElement>`<br/>
 
 <ScatterSeriesError/>

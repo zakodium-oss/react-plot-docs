@@ -30,7 +30,7 @@ import PolylineDemo from './Polyline.demo.tsx';
   type: `string`<br/>
   default: `"black"`
 
-all `<line>` svg props are supported for more information visit [the documentation](https://developer.mozilla.org/en-US/docs/Web/SVG/Element/line)
+all `<line>` svg props are supported. For more information visit [the documentation](https://developer.mozilla.org/en-US/docs/Web/SVG/Element/line)
 
 ## Arrow
 
@@ -62,4 +62,4 @@ same as [Line](./300_otherShapes.md#line) with 2 more special props :
   type: `string`<br/>
   default: `"black"`
 
-all `<polygone>` svg props are supported for more information visit [the documentation](https://developer.mozilla.org/en-US/docs/Web/SVG/Element/polygone)
+all `<polygone>` svg props are supported. For more information visit [the documentation](https://developer.mozilla.org/en-US/docs/Web/SVG/Element/polygone)

@@ -33,7 +33,7 @@ import ShapeDemo from './Shape.demo.tsx';
   type: `string`<br/>
   default: `"black"`
 
-all `<rect>` svg props are supported for more information visit [the documentation](https://developer.mozilla.org/en-US/docs/Web/SVG/Element/rect)
+all `<rect>` svg props are supported. For more information visit [the documentation](https://developer.mozilla.org/en-US/docs/Web/SVG/Element/rect)
 
 ## Circle
 
@@ -43,9 +43,9 @@ all `<rect>` svg props are supported for more information visit [the documentati
 
 #### Mandatory
 
-- **x:** center horizontal coordinate<br />
+- **x:** centers horizontal coordinate<br />
   type: [`ScalarValue`](../500_types/scalarValue.md)<br/>
-- **y:** center vertical coordinate<br />
+- **y:** centers vertical coordinate<br />
   type: [`ScalarValue`](../500_types/scalarValue.md)<br/>
 - **r:** circle radius<br />
   type: [`ScalarValue`](../500_types/scalarValue.md)<br/>
@@ -56,7 +56,7 @@ all `<rect>` svg props are supported for more information visit [the documentati
   type: `string`<br/>
   default: `"black"`
 
-all `<circle>` svg props are supported for more information visit [the documentation](https://developer.mozilla.org/en-US/docs/Web/SVG/Element/circle)
+all `<circle>` svg props are supported. For more information visit [the documentation](https://developer.mozilla.org/en-US/docs/Web/SVG/Element/circle)
 
 ## Ellipse
 
@@ -66,9 +66,9 @@ all `<circle>` svg props are supported for more information visit [the documenta
 
 #### Mandatory
 
-- **x:** center horizontal coordinate<br />
+- **x:** centers horizontal coordinate<br />
   type: [`ScalarValue`](../500_types/scalarValue.md)<br/>
-- **y:** center vertical coordinate<br />
+- **y:** centers vertical coordinate<br />
   type: [`ScalarValue`](../500_types/scalarValue.md)<br/>
 - **rx:** radius on the horizontal axis<br />
   type: [`ScalarValue`](../500_types/scalarValue.md)<br/>
@@ -108,7 +108,7 @@ all `<ellipse>` svg props are supported for more information visit [the document
   type: `string`<br/>
   default: `"black"`
 
-all `<ellipse>` svg props are supported for more information visit [the documentation](https://developer.mozilla.org/en-US/docs/Web/SVG/Element/ellipse)
+all `<ellipse>` svg props are supported. For more information visit [the documentation](https://developer.mozilla.org/en-US/docs/Web/SVG/Element/ellipse)
 
 ## Polygone
 
@@ -127,7 +127,7 @@ all `<ellipse>` svg props are supported for more information visit [the document
   type: `string`<br/>
   default: `"black"`
 
-all `<polygone>` svg props are supported for more information visit [the documentation](https://developer.mozilla.org/en-US/docs/Web/SVG/Element/polygone)
+all `<polygone>` svg props are supported. For more information visit [the documentation](https://developer.mozilla.org/en-US/docs/Web/SVG/Element/polygone)
 
 ## Shape
 
@@ -151,7 +151,7 @@ all `<polygone>` svg props are supported for more information visit [the documen
 - **color:** fill color<br />
   type: `string`<br/>
   default: `"black"`
-- **style:** customise shape styling<br />
+- **style:** customises shape styling<br />
   type: `CSSProperties`<br/>
   default: `{}`
 - **onMouseEnter:** mouse enter event callback<br />

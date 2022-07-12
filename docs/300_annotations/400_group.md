@@ -22,14 +22,14 @@ import GroupAlign from './GroupAlign.demo.tsx';
 
 #### Optional
 
-- **style:** customize group children style<br />
+- **style:** customizes group children style<br />
   type: `CSSProperties`<br/>
   default: `{}`
 
-- **horizontalAlign:** change group horizontal align<br />
+- **horizontalAlign:** changes group horizontal align<br />
   type: `'start' | 'middle' | 'end' | 'none'`<br/>
   default: `none`
-- **verticalAlign:** change group vertical align<br />
+- **verticalAlign:** changes group vertical align<br />
   type: `'start' | 'middle' | 'end' | 'none'`<br/>
   default: `'none'`
 

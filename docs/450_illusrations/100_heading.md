@@ -5,7 +5,7 @@ import HeadingTitle from './HeadingTitle.demo.tsx';
 import HeadingSubtitle from './HeadingSubtitle.demo.tsx';
 import HeadingPosition from './HeadingPosition.demo.tsx';
 
-`Heading` represent the plot label
+`Heading` represents the plot label
 
 <HeadingDemo/>
 
@@ -22,10 +22,10 @@ import HeadingPosition from './HeadingPosition.demo.tsx';
 
 ### Optional
 
-- **titleStyle:** customise title style<br />
+- **titleStyle:** customises title style<br />
   type: `CSSProperties`<br/>
   default: `{}`
-- **titleClass:** add a class to the title<br />
+- **titleClass:** adds a class to the title<br />
   type: `string`<br/>
   default: `""`
 
@@ -34,16 +34,16 @@ import HeadingPosition from './HeadingPosition.demo.tsx';
 - **subtitle:** heading subtitle text content<br />
   type: `string`<br/>
   default: `""`
-- **subtitleStyle:** customise subtitle style<br />
+- **subtitleStyle:** customises subtitle style<br />
   type: `CSSProperties`<br/>
   default: `{}`
-- **subtitleClass:** add a class to the subtitle<br />
+- **subtitleClass:** adds a class to the subtitle<br />
   type: `string`<br  
   default: `""`
 
   <HeadingSubtitle/>
 
-- **position:** add a class to the subtitle<br />
+- **position:** adds a class to the subtitle<br />
   type: `'top' | 'bottom'`<br  
   default: `'top'`
 

@@ -26,18 +26,18 @@ To set the horizontal domain use one of these options :<br/>
 
 ## Data
 
-In `FuntionSeries` we don't have data props we just need precise our function using `getY` callback
+In `FunctionSeries` we don't have data props we just need to precise our function using `getY` callback
 
 #### <u>Example:</u>
 
-We want to display y=f(x), which f is a declared function
+We want to display y=f(x), where f is a declared function
 `getY={(x)=>f(x)}`
 <FunctionSeriesData/>
 
 ## Props
 
-Like all other series, scatter series have **[Base props](./000_intro.md/#base-props)**<br/>
-They also have many other props that we can class into the following categories :
+Like all other series, function series have **[Base props](./000_intro.md/#base-props)**<br/>
+They also have other props that we can class into the following categories :
 
 ### 1. Function
 
@@ -46,7 +46,7 @@ They also have many other props that we can class into the following categories 
 
 ### 2. Lines
 
-- **lineStyle:** styling of the serie's path statique or dynamique that depend series id<br />
+- **lineStyle:** styling of the serie's path static or dynamic depending on series id<br />
   type: `CSSFuncProps<{id}>`<br/>
   default: `false`
 
