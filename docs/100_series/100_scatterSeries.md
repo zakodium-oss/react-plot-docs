@@ -23,13 +23,13 @@ Like all other series, scatter series have **[Base props](./000_intro.md/#base-p
 - **displayMarkers:** display scatter points markers<br />
   type: `boolean`<br/>
   default: `true`
-- **markerShape:** serie's shape of a marker.Can be dynamic or static<br />
+- **markerShape:** serie's shape of a marker. Can be either dynamic or static<br />
   type: `ShapeFuncProps`<br/>
   default: `'circle'`
 - **markerSize:** serie's size of a marker<br />
   type: `number`<br/>
   default: `8`
-- **markerStyle:** serie's markers style that can be dynamic or static<br />
+- **markerStyle:** serie's markers style (static / dynamic)<br />
   type: `CSSFuncProps`<br/>
   default: `{}`
 

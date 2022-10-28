@@ -34,7 +34,7 @@ Adding two bottom axes in the same plot will throw the following error :<br/>
 
 ### 1. Axis Positon
 
-- **position:**a mandatory prop that allows you to choose axis position<br/>
+- **position:** a mandatory prop that allows you to choose axis position<br/>
   type: `'top' | 'bottom' | 'left' | 'right'`
 
 <AxisPosition/>
@@ -77,7 +77,7 @@ Adding two bottom axes in the same plot will throw the following error :<br/>
 
 ### 4. Choose Axis Behaviour
 
-- **flip:** used to filp axis<br />
+- **flip:** used to flip axis<br />
   type: `boolean`<br/>
   default: `false`
 
@@ -89,7 +89,7 @@ Adding two bottom axes in the same plot will throw the following error :<br/>
 
   <AxisHidden/>
 
-### 5. Personnalise Axis
+### 5. Customize Axis
 
 #### a. Line
 
@@ -165,7 +165,7 @@ Adding two bottom axes in the same plot will throw the following error :<br/>
 
 #### e. Ticks labels
 
-- **tickLabelFormat:** personnalises the format of tick labels<br />
+- **tickLabelFormat:** personalises the format of tick labels<br />
   type: `(x: number)=>string`<br/>
   default: `d3's smart tickFormat for time scale, String for others`
 - **tickLabelStyle:** changes tick labels style<br />

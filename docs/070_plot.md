@@ -34,7 +34,7 @@ import PlotMargin from './plot/PlotMargin.demo.tsx';
 - **colorScheme:** Color scheme used to pick colors for the series<br />
   type: `Iterable<string>`<br/>
   default: "schemeSet1" from "d3-scale-chromatic"
-- **margin:** Color scheme used to pick colors for the series<br />
+- **margin:** Pixel distance between seriesViewport and plotViewport.<br />
   type: `{top?:number, bottom?:number, left?:number, right?:number}`<br/>
   default: `{}`
 - **svgStyle:** Style applied to the SVG element<br />
