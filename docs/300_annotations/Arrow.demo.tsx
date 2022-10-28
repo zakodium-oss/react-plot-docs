@@ -1,7 +1,7 @@
 import React from 'react';
 import { Annotations, Annotation, Plot, Axis } from 'react-plot';
 export default function PlotAnnotations() {
-  const Explication = [
+  const Explanation = [
     <Annotation.Text x={3.3} y={1.7} text-anchor="start">
       startPoint="circle"
     </Annotation.Text>,
@@ -24,7 +24,7 @@ export default function PlotAnnotations() {
         />
 
         {/* Props explication */}
-        {Explication}
+        {Explanation}
       </Annotations>
       <Axis min={0} max={10} position="bottom" />
       <Axis min={0} max={10} position="left" />

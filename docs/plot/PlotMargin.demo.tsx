@@ -2,7 +2,7 @@ import React from 'react';
 import { Axis, LineSeries, Plot } from 'react-plot';
 
 export default function DrainVoltage() {
-  const Explication = (
+  const Explanation = (
     <div>
       <text
         style={{
@@ -141,7 +141,7 @@ export default function DrainVoltage() {
     <div
       style={{ position: 'relative', paddingTop: '20px', paddingRight: '20px' }}
     >
-      {Explication}
+      {Explanation}
       <Plot
         width={300}
         height={300}

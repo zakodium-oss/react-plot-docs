@@ -1,7 +1,7 @@
 import React from 'react';
 import { Annotations, Annotation, Plot, Axis } from 'react-plot';
 export default function PlotAnnotations() {
-  const Explication = [
+  const Explanation = [
     <Annotation.Line
       x1={5}
       x2={5}
@@ -32,7 +32,7 @@ export default function PlotAnnotations() {
         <Annotation.Circle x={5} y={5} r={3} color="violet" />
 
         {/* Props explication */}
-        {Explication}
+        {Explanation}
       </Annotations>
       <Axis min={0} max={10} position="bottom" />
       <Axis min={0} max={10} position="left" />

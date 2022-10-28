@@ -1,7 +1,7 @@
 import React from 'react';
 import { Annotations, Annotation, Plot, Axis, Heading } from 'react-plot';
 export default function PlotAnnotations() {
-  const Explication = [
+  const Explanation = [
     [
       <Annotation.Rectangle
         x1={4.7}
@@ -65,7 +65,7 @@ export default function PlotAnnotations() {
           </Annotation.Group>
 
           {/* Props explication */}
-          {Explication[0]}
+          {Explanation[0]}
         </Annotations>
         <Axis min={0} max={10} position="bottom" hidden />
         <Axis min={0} max={3} position="left" hidden />
@@ -88,7 +88,7 @@ export default function PlotAnnotations() {
           </Annotation.Group>
 
           {/* Props explication */}
-          {Explication[0]}
+          {Explanation[0]}
         </Annotations>
         <Axis min={0} max={10} position="bottom" hidden />
         <Axis min={0} max={3} position="left" hidden />
@@ -111,7 +111,7 @@ export default function PlotAnnotations() {
           </Annotation.Group>
 
           {/* Props explication */}
-          {Explication[1]}
+          {Explanation[1]}
         </Annotations>
         <Axis min={0} max={10} position="bottom" hidden />
         <Axis min={0} max={3} position="left" hidden />
@@ -134,7 +134,7 @@ export default function PlotAnnotations() {
           </Annotation.Group>
 
           {/* Props explication */}
-          {Explication[2]}
+          {Explanation[2]}
         </Annotations>
         <Axis min={0} max={10} position="bottom" hidden />
         <Axis min={0} max={3} position="left" hidden />
