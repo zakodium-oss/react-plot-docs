@@ -127,7 +127,7 @@ all `<ellipse>` svg props are supported. For more information visit [the documen
   type: `string`<br/>
   default: `"black"`
 
-all `<polygone>` svg props are supported. For more information visit [the documentation](https://developer.mozilla.org/en-US/docs/Web/SVG/Element/polygone)
+all `<polygon>` svg props are supported. For more information visit [the documentation](https://developer.mozilla.org/en-US/docs/Web/SVG/Element/polygon)
 
 ## Shape
 
