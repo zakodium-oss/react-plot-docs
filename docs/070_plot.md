@@ -14,8 +14,8 @@ import PlotMargin from './plot/PlotMargin.demo.tsx';
 - [`Series`](./100_series/000_intro.md) components
 - [`Axes`](./200_axes/000_intro.md) components
 - [`Annotations`](./300_annotations/000_intro.md)
-- [`Heading`](./450_illusrations/100_heading.md)
-- [`Legend`](./450_illusrations/200_legend.md)
+- [`Heading`](./450_illustrations/100_heading.md)
+- [`Legend`](./450_illustrations/200_legend.md)
 
 ## Props
 

@@ -5,7 +5,7 @@ import RectangleDemo from './Rectangle.demo.tsx';
 import CircleDemo from './Circle.demo.tsx';
 import EllipseDemo from './Ellipse.demo.tsx';
 import DirectedEllipseDemo from './DirectedEllipse.demo.tsx';
-import PolygoneDemo from './Polygone.demo.tsx';
+import PolygonDemo from './Polygon.demo.tsx';
 import ShapeDemo from './Shape.demo.tsx';
 
 <FilledShapesDemo/>
@@ -110,9 +110,9 @@ all `<ellipse>` svg props are supported for more information visit [the document
 
 all `<ellipse>` svg props are supported. For more information visit [the documentation](https://developer.mozilla.org/en-US/docs/Web/SVG/Element/ellipse)
 
-## Polygone
+## Polygon
 
-<PolygoneDemo/>
+<PolygonDemo/>
 
 ### Props
 
