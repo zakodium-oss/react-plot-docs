@@ -19,7 +19,7 @@ Currently we support following functional hooks:
 
 ## useAxisZoom
 
-This hook allows to zoom in a plot along the specified axis (default to horitzontal) while drawing a rectangle. There are 3 steps in order to implement the zoom:
+This hook allows to zoom in a plot along the specified axis (default to horizontal) while drawing a rectangle. There are 3 steps in order to implement the zoom:
 
 - wrap your plot component in `<PlotController>`
 - add the hook: `const zoom = useAxisZoom({direction:'horizontal'});`
@@ -63,7 +63,7 @@ The hook may be customized with following props:
   type : `string`<br/>
   default : `false`
 
-There are 2 steps in order ot implement the wheel zoom:
+There are 2 steps in order to implement the wheel zoom:
 
 - wrap your plot component in `<PlotController>`
 - add the hook: `useAxisWheelZoom({direction:'vertical', center:0, factor:1, invert:false})`
@@ -103,7 +103,7 @@ There are 3 steps in order to implement the crossHair:
 
 ## usePan
 
-This hook adds an interactive pan to the plot to move in any direction while holding `SHIFT`. There are 2 steps in order to implement the pan:
+This hook adds an interactive pan to the plot to move in any direction while holding `ALT`. There are 2 steps in order to implement the pan:
 
 - wrap your plot component in `<PlotController>`
 - add the hook: `usePan();`

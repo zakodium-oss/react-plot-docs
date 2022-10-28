@@ -14,4 +14,4 @@ In order to understand hooks, we have divided them into three categories :
 
 - **[Basic](./100_basic.md)** : low level hook helps to create your own functionalities
 - **[Draw](./200_draw.md)** : allows you to draw in your plot
-- **[Fonctional](./300_functional.md)** : precoded functionality
+- **[Functional](./300_functional.md)** : precoded functionality

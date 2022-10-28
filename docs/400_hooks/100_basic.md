@@ -5,7 +5,7 @@ import UsePlotControllerAxes from './UsePlotControllerAxes.demo.tsx';
 
 Low level hooks used by other hooks but can also be used natively.
 
-Currently we support following basic hooks:
+Currently we support the following basic hooks:
 
 - **[useStartMoveEnd](./100_basic.md#usestartmoveend)**
 - **[usePlotControllerAxes](./100_basic.md#useplotcontrolleraxes)**

@@ -12,8 +12,8 @@ We currently allow following three types :
 
 ### Definition
 
-**In typescript :** `number`<br/>
-**Example :** `3`,`5`
+**In Typescript:** `number`<br/>
+**Example:** `3`,`5`
 
 ### Utilities
 
@@ -27,9 +27,9 @@ The value is converted using [Axis](../200_axes/000_intro.md) scale
 
 ### Definition
 
-**In typescript :** `'${number}'`<br/>
-**Explication :** String number<br/>
-**Example :** `'3'`,`'5'`
+**In Typescript:** `'${number}'`<br/>
+**Explanation:** String number<br/>
+**Example:** `'3'`,`'5'`
 
 ### Utilities
 
@@ -39,13 +39,13 @@ The value is in pixels, independent from scale and [Axis](../200_axes/000_intro.
 
 <ScalarValuePixels />
 
-## 3. Pourcentage
+## 3. Percentage
 
 ### Definition
 
-**In typescript :** `'${number}%'`<br/>
-**Explication :** String number ends with `"%"`<br/>
-**Example :** `'3%'`,`'5%'`
+**In Typescript:** `'${number}%'`<br/>
+**Explanation:** String number ends with `"%"`<br/>
+**Example:** `'3%'`,`'5%'`
 
 ### Utilities
 
