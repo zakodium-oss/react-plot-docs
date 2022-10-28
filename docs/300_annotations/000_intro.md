@@ -21,7 +21,7 @@ There are 3 categories each one may contain many annotations :
   - [Circle](./200_filledShapes.md#circle)
   - [Ellipse](./200_filledShapes.md#ellipse)
   - [DirectedEllipse](./200_filledShapes.md#directedellipse)
-  - [Polygone](./200_filledShapes.md#polygone)
+  - [Polygon](./200_filledShapes.md#polygon)
   - [Shape](./200_filledShapes.md#shape)
 - **[Other shapes](./300_otherShapes.md)**
   - [Line](./300_otherShapes.md#line)

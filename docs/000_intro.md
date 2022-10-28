@@ -11,6 +11,6 @@ React-plot is a react component specially designed to display scientific informa
 
 <DrainVoltage />
 
-Interactivity with the plot is achieved Using `hooks`. In the following example it is possible to draw a rectangle to zoom and click twice to reset the original zoom.
+Interactivity with the plot is achieved using `hooks`. In the following example it is possible to draw a rectangle to zoom and click twice to reset the original zoom.
 
 <ZoomableInfrared noCodesandbox/>

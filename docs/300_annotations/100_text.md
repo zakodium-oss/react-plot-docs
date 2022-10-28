@@ -2,7 +2,7 @@
 
 import TextDemo from './Text.demo.tsx';
 
-`Text` annotation allows adding personnalized text to plot in a specific position
+`Text` annotation allows adding personalised text to plot in a specific position
 
 <TextDemo/>
 

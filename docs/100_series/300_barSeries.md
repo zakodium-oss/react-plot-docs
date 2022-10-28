@@ -23,7 +23,7 @@ They also have other props that we can class into the following categories :
 
 - **displayMarkers:** displays scatter points markers<br />
   type: `boolean`<br/>
-  default: `true`
+  default: `false`
 - **markerShape:** serie's markers shape<br />
   type: `Shape`<br/>
   default: `'circle'`
