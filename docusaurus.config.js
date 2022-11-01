@@ -73,7 +73,6 @@ const config = {
             require.resolve('./src/css/custom.css'),
             require.resolve('./src/css/demo.css'),
           ],
-          prism: {},
         },
       }),
     ],

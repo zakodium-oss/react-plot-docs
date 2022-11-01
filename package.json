@@ -15,22 +15,26 @@
     "prettier": "prettier --check *",
     "prettier-write": "prettier --write *"
   },
+  "overrides": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
   "dependencies": {
-    "@docusaurus/core": "^2.0.0-beta.17",
-    "@docusaurus/preset-classic": "^2.0.0-beta.17",
-    "@easyops-cn/docusaurus-search-local": "^0.23.0",
+    "@docusaurus/core": "^2.2.0",
+    "@docusaurus/preset-classic": "^2.2.0",
+    "@easyops-cn/docusaurus-search-local": "^0.33.5",
     "@mdx-js/react": "^1.6.22",
     "@types/react-inspector": "^4.0.2",
     "change-case": "^4.1.2",
-    "clsx": "^1.1.1",
-    "jcampconverter": "^8.2.5",
+    "clsx": "^1.2.1",
+    "jcampconverter": "^9.0.2",
     "lz-string": "^1.4.4",
-    "ml-spectra-processing": "^11.6.0",
-    "prism-react-renderer": "^1.3.1",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
+    "ml-spectra-processing": "^11.13.0",
+    "prism-react-renderer": "^1.3.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-inspector": "^5.1.1",
-    "react-plot": "^0.19.1",
+    "react-plot": "^0.20.3",
     "xy-parser": "^5.0.2"
   },
   "browserslist": {
@@ -46,10 +50,10 @@
     ]
   },
   "devDependencies": {
-    "@babel/core": "^7.17.8",
-    "@babel/parser": "^7.17.8",
-    "@babel/preset-typescript": "^7.16.7",
-    "@docusaurus/types": "^2.0.0-beta.17",
-    "prettier": "^2.6.0"
+    "@babel/core": "^7.19.6",
+    "@babel/parser": "^7.20.1",
+    "@babel/preset-typescript": "^7.18.6",
+    "@docusaurus/types": "^2.2.0",
+    "prettier": "^2.7.1"
   }
 }
