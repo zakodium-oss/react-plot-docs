@@ -4,7 +4,7 @@ import { Axis, LineSeries, Plot } from 'react-plot';
 export default function DrainVoltage() {
   const Explanation = (
     <div>
-      <text
+      <span
         style={{
           marginTop: '10px',
           display: 'block',
@@ -12,8 +12,8 @@ export default function DrainVoltage() {
         }}
       >
         Plot viewport
-      </text>
-      <text
+      </span>
+      <span
         style={{
           position: 'absolute',
           top: '80px',
@@ -22,7 +22,7 @@ export default function DrainVoltage() {
         }}
       >
         Series viewport
-      </text>
+      </span>
       <svg
         style={{
           position: 'absolute',
@@ -39,7 +39,7 @@ export default function DrainVoltage() {
           y1={24}
           y2={24}
           stroke="brown"
-          stroke-width="4"
+          strokeWidth="4"
         ></line>
         <line
           x1={0}
@@ -47,7 +47,7 @@ export default function DrainVoltage() {
           y1={18}
           y2={30}
           stroke="brown"
-          stroke-width="4"
+          strokeWidth="4"
         ></line>
         <line
           x1={300}
@@ -55,7 +55,7 @@ export default function DrainVoltage() {
           y1={18}
           y2={30}
           stroke="brown"
-          stroke-width="4"
+          strokeWidth="4"
         ></line>
       </svg>
       <svg
@@ -70,7 +70,7 @@ export default function DrainVoltage() {
           x="110"
           y="160"
           transform="rotate(90,100,100)"
-          dominant-baseline="central"
+          dominantBaseline="central"
           fill="brown"
         >
           Height
@@ -81,7 +81,7 @@ export default function DrainVoltage() {
           y1={0}
           y2="300"
           stroke="brown"
-          stroke-width="4"
+          strokeWidth="4"
         ></line>
         <line
           x1={5}
@@ -89,7 +89,7 @@ export default function DrainVoltage() {
           y1={0}
           y2={0}
           stroke="brown"
-          stroke-width="4"
+          strokeWidth="4"
         ></line>
         <line
           x1={5}
@@ -97,7 +97,7 @@ export default function DrainVoltage() {
           y1={300}
           y2={300}
           stroke="brown"
-          stroke-width="4"
+          strokeWidth="4"
         ></line>
       </svg>
       <svg
@@ -113,25 +113,18 @@ export default function DrainVoltage() {
           y1={0}
           y2={50}
           stroke="black"
-          stroke-width="4"
+          strokeWidth="4"
         ></line>
         <text x="9" y="28">
           Margin
         </text>
-        <line
-          x1={0}
-          x2={8}
-          y1={2}
-          y2={2}
-          stroke-width="2"
-          stroke="black"
-        ></line>
+        <line x1={0} x2={8} y1={2} y2={2} strokeWidth="2" stroke="black"></line>
         <line
           x1={0}
           x2={8}
           y1={48}
           y2={48}
-          stroke-width="2"
+          strokeWidth="2"
           stroke="black"
         ></line>
       </svg>

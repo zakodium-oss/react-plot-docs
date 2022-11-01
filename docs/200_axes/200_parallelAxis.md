@@ -21,8 +21,6 @@ ParallelAxis is a component used to create a parallel axis to an existed **[Axis
 - **id:** mandatory prop that specifies the base axis<br/>
   type: `string`<br/>
 
-  <AxisId />
-
 ### 2. Choose Axis Behaviour
 
 - **hidden:** Hides all axis elements<br />
