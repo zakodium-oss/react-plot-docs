@@ -34,7 +34,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-inspector": "^5.1.1",
-    "react-plot": "^0.20.3",
+    "react-plot": "^0.20.4",
     "xy-parser": "^5.0.2"
   },
   "browserslist": {
