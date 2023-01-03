@@ -21,7 +21,7 @@ function Series() {
           10%
         </Annotation.Text>
         <Annotation.Shape size={5} shape="circle" x="20%" y={0} color="red" />
-        <Annotation.Text x="200" y={0}>
+        <Annotation.Text x="20%" y={0}>
           20%
         </Annotation.Text>
         <Annotation.Shape size={5} shape="circle" x="50%" y={0} color="red" />

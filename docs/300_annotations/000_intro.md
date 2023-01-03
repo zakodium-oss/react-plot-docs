@@ -8,7 +8,7 @@ import AnnotationsDemo from './Annotations.demo.tsx';
 
 ## Restriction
 
-Annotations must be inside the `Annotation` component, they cannot be placed directly inside `Plot`,<br/> otherwise you would get the following error:
+Annotations must be inside the `Annotation` component, they cannot be placed directly inside `Plot`,`<br/>` otherwise you would get the following error:
 `invalid plot child`
 
 ## Annotations
@@ -27,4 +27,5 @@ There are 3 categories each one may contain many annotations :
   - [Line](./300_otherShapes.md#line)
   - [Arrow](./300_otherShapes.md#arrow)
   - [Polyline](./300_otherShapes.md#line)
-- **[Group](./400_group.md)**
+- [BoxPlot](./400_boxplot.md)
+- [Group](./500_group.md)
