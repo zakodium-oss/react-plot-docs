@@ -18,7 +18,7 @@ a bloxplot superimposed on a scatter plot of the dataset.
 - **q1:** First Quartile of the dataset <br/>
   type: [`ScalarValue`](../500_types/100_scalarValue.md) <br/>
 - **median:** Median of the dataset <br/>
-  type: `ScalarValue` <br/>
+  type: [`ScalarValue`](../500_types/100_scalarValue.md) <br/>
 - **q3:** Third Quartile of the dataset <br/>
   type: [`ScalarValue`](../500_types/100_scalarValue.md) <br/>
 - **width:** Width of the boxplot <br/>

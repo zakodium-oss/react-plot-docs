@@ -1,6 +1,6 @@
 # PlotObjectAnnotations
 
-PlotObjectAnnotations is a type that is used to define the [Annotations](../300_annotations/000_intro.md) to be rendered by the [PlotObject](../070_plot/200_plotObject.md) component.
+PlotObjectAnnotations is a type that is used to define the [Annotations](../300_annotations/000_intro.md) to be rendered by the [PlotObject](../070_container/200_plotObject.md) component.
 
 it has one main property, `type`, which decide the content you want to render and the properties that are available for that content.
 

@@ -1,6 +1,6 @@
 # PlotObjectContent
 
-PlotObjectPlot is a type that is used to define the [Series](../100_series/000_intro.md) and [Annotations](../300_annotations/000_intro.md) to be rendered by the [PlotObject](../070_plot/200_plotObject.md) component.
+PlotObjectPlot is a type that is used to define the [Series](../100_series/000_intro.md) and [Annotations](../300_annotations/000_intro.md) to be rendered by the [PlotObject](../070_container/200_plotObject.md) component.
 
 it has one main property, `type`, which decide the content you want to render and the properties that are available for that content.
 
