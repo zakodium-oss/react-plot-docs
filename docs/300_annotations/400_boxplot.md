@@ -11,56 +11,56 @@ a bloxplot superimposed on a scatter plot of the dataset.
 
 ### Mandatory
 
-- **min:** Minumum value in the dataset `<br/>`
-  type: `ScalarValue` `<br/>`
-- **max:** Maximum value in the dataset `<br/>`
-  type: `ScalarValue` `<br/>`
-- **q1:** First Quartile of the dataset `<br/>`
-  type: `ScalarValue` `<br/>`
-- **median:** Median of the dataset `<br/>`
-  type: `ScalarValue` `<br/>`
-- **q3:** Third Quartile of the dataset `<br/>`
-  type: `ScalarValue` `<br/>`
-- **width:** Width of the boxplot `<br/>`
-  type: `ScalarValue` `<br/>`
-- **y:** y location of the boxplot `<br/>`
-  type: `ScalarValue` `<br/>`
+- **min:** Minumum value in the dataset <br/>
+  type: `ScalarValue` <br/>
+- **max:** Maximum value in the dataset <br/>
+  type: `ScalarValue` <br/>
+- **q1:** First Quartile of the dataset <br/>
+  type: `ScalarValue` <br/>
+- **median:** Median of the dataset <br/>
+  type: `ScalarValue` <br/>
+- **q3:** Third Quartile of the dataset <br/>
+  type: `ScalarValue` <br/>
+- **width:** Width of the boxplot <br/>
+  type: `ScalarValue` <br/>
+- **y:** y location of the boxplot <br/>
+  type: `ScalarValue` <br/>
 
 ### Optional
 
-- **xAxis:** The xAxis `<br/>`
-  type: `string<br/>`
+- **xAxis:** The xAxis <br/>
+  type: `string`<br/>
   default: `x`
-- **yAxis:** The yAxis `<br/>`
-  type: `string<br/>`
+- **yAxis:** The yAxis <br/>
+  type: `string`<br/>
   default: `y`
-- **medianColor:** Color name of the median line `<br/>`
-  type: `string<br/>`
+- **medianColor:** Color name of the median line <br/>
+  type: `string`<br/>
   default: `black`
-- **medianStyle:** CSS properties of the median line `<br/>`
-  type: `CSSProperties<br/>`
+- **medianStyle:** CSS properties of the median line <br/>
+  type: `CSSProperties`<br/>
   default: `{}`
-- **boxColor:** Color name of the box `<br/>`
-  type: `string<br/>`
+- **boxColor:** Color name of the box <br/>
+  type: `string`<br/>
   default: `black`
-- **boxStyle:** CSS Properties of the box `<br/>`
-  type: `CSSProperties<br/>`
+- **boxStyle:** CSS Properties of the box <br/>
+  type: `CSSProperties`<br/>
   default: `{}`
-- **whiskerColor:** Color name of the whisker lines `<br/>`
-  type: `string<br/>`
+- **whiskerColor:** Color name of the whisker lines <br/>
+  type: `string`<br/>
   default: `black`
-- **whiskerStyle:** CSS Properties of the whisker lines `<br/>`
-  type: `CSSProperties<br/>`
+- **whiskerStyle:** CSS Properties of the whisker lines <br/>
+  type: `CSSProperties`<br/>
   default: `{}`
-- **minMaxColor:** Color name of the min/max lines `<br/>`
-  type: `string<br/>`
+- **minMaxColor:** Color name of the min/max lines <br/>
+  type: `string`<br/>
   default: `black`
-- **minMaxStyle:** CSS Properties of the min/max lines `<br/>`
-  type: `CSSProperties<br/>`
+- **minMaxStyle:** CSS Properties of the min/max lines <br/>
+  type: `CSSProperties`<br/>
   default: `{}`
-- **onMouseEnter:** Handler for MouseEnter events `<br/>`
-  type: `MouseEventHandler<SVGGElement><br/>`
+- **onMouseEnter:** Handler for MouseEnter events <br/>
+  type: `MouseEventHandler<SVGGElement>`<br/>
   default: `{}`
-- **onMouseLeave:** Handler for MouseLeave events `<br/>`
-  type: `MouseEventHandler<SVGGElement><br/>`
+- **onMouseLeave:** Handler for MouseLeave events <br/>
+  type: `MouseEventHandler<SVGGElement>`<br/>
   default: `{}`

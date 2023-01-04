@@ -21,32 +21,32 @@ Data is an array of points that differ from one serie to another
 
 Base props are the props that all series have:
 
-#### `<u>`Mandatory`</u>`
+#### <u>Mandatory</u>
 
-- **data:** displays serie's data`<br/>`
+- **data:** displays serie's data<br/>
   type: [`Data`](../500_types/data.md)
 
-#### `<u>`Optional`</u>`
+#### <u>Optional</u>
 
-- **id:** serie id`<br/>`
+- **id:** serie id<br/>
   type: `string`
   default: generated automatically
 - **xAxis:** series horizontal axis id `<br />`
-  type: `string<br/>`
+  type: `string`<br/>
   default: `"x"`
 - **yAxis:** series vertical axis id `<br />`
-  type: `string<br/>`
+  type: `string`<br/>
   default: `"y"`
 - **label:** label of the serie that can be displayed in legends`<br />`
-  type: `string<br/>`
+  type: `string`<br/>
 - **hidden:** hides serie`<br />`
-  type: `boolean<br/>`
+  type: `boolean`<br/>
   default: `false`
 - **xShift:** shifts the data relative to horizontal axis`<br />`
-  type: `number or string<br/>`
+  type: `number or string`<br/>
   default: `0`
 - **yShift:** shifts the data relative to vertical axis`<br />`
-  type: `number or string<br/>`
+  type: `number or string`<br/>
   default: `0`
 
 ## Example

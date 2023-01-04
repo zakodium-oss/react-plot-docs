@@ -8,7 +8,7 @@ import AnnotationsDemo from './Annotations.demo.tsx';
 
 ## Restriction
 
-Annotations must be inside the `Annotation` component, they cannot be placed directly inside `Plot`,`<br/>` otherwise you would get the following error:
+Annotations must be inside the `Annotation` component, they cannot be placed directly inside `Plot`,<br/> otherwise you would get the following error:
 `invalid plot child`
 
 ## Annotations

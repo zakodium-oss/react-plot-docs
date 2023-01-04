@@ -23,34 +23,34 @@ import PlotMargin from './PlotMargin.demo.tsx';
 
 ### Mandatory
 
-- **width:** Width of the SVG in pixels`<br />`
-  type: `number<br/>`
-- **height:** Height of the SVG in pixels`<br />`
-  type: `number<br/>`
+- **width:** Width of the SVG in pixels <br />
+  type: `number`<br/>
+- **height:** Height of the SVG in pixels <br />
+  type: `number`<br/>
 
 ### Optional
 
-- **colorScheme:** Color scheme used to pick colors for the series`<br />`
-  type: `Iterable<string><br/>`
+- **colorScheme:** Color scheme used to pick colors for the series <br />
+  type: `Iterable<string>`<br/>
   default: "schemeSet1" from "d3-scale-chromatic"
-- **margin:** Pixel distance between seriesViewport and plotViewport.`<br />`
-  type: `{top?:number, bottom?:number, left?:number, right?:number}<br/>`
+- **margin:** Pixel distance between seriesViewport and plotViewport.<br />
+  type: `{top?:number, bottom?:number, left?:number, right?:number}`<br/>
   default: `{}`
-- **svgStyle:** Style applied to the SVG element`<br />`
-  type: `CSSProperties<br/>`
+- **svgStyle:** Style applied to the SVG element <br />
+  type: `CSSProperties`<br/>
   default: `{}`
-- **svgId:** Id of the SVG element`<br />`
-  type: `string<br/>`
+- **svgId:** Id of the SVG element <br />
+  type: `string`<br/>
   default: generated automatically
-- **svgClassName:** Class name of the SVG element`<br />`
-  type: `string<br/>`
+- **svgClassName:** Class name of the SVG element <br />
+  type: `string`<br/>
   default: `""`
-- **plotViewportStyle:** Style applied to the rectangle around the entire plot`<br />`
-  type: `CSSProperties<br/>`
+- **plotViewportStyle:** Style applied to the rectangle around the entire plot <br />
+  type: `CSSProperties`<br/>
   default: `{}`
-- **seriesViewportStyle:** Style applied to the rectangle around the series viewport`<br />`
-  type: `CSSProperties<br/>`
+- **seriesViewportStyle:** Style applied to the rectangle around the series viewport <br />
+  type: `CSSProperties`<br/>
   default: `{}`
-- **controllerId:** Id of the parent PlotController that will control this plot`<br />`
-  type: `string<br/>`
+- **controllerId:** Id of the parent PlotController that will control this plot <br />
+  type: `string`<br/>
   default: `""`
