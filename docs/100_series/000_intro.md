@@ -24,7 +24,7 @@ Base props are the props that all series have:
 #### <u>Mandatory</u>
 
 - **data:** displays serie's data<br/>
-  type: [`Data`](../500_types/data.md)
+  type: [`Data`](../500_types/000_data.md)
 
 #### <u>Optional</u>
 

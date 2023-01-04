@@ -13,7 +13,7 @@ this example render a simple line plot with the given data on the x and y axes. 
 ### Mandatory
 
 - **plot:** Object that defines the properties of the plot to be rendered. <br />
-  type: [`PlotObjectPlot`](../500_types/plotObjectPlot.md)
+  type: [`PlotObjectPlot`](../500_types/200_plotObjectPlot.md)
 
 ### Optional
 

@@ -12,19 +12,19 @@ a bloxplot superimposed on a scatter plot of the dataset.
 ### Mandatory
 
 - **min:** Minumum value in the dataset <br/>
-  type: `ScalarValue` <br/>
+  type: [`ScalarValue`](../500_types/100_scalarValue.md) <br/>
 - **max:** Maximum value in the dataset <br/>
-  type: `ScalarValue` <br/>
+  type: [`ScalarValue`](../500_types/100_scalarValue.md) <br/>
 - **q1:** First Quartile of the dataset <br/>
-  type: `ScalarValue` <br/>
+  type: [`ScalarValue`](../500_types/100_scalarValue.md) <br/>
 - **median:** Median of the dataset <br/>
   type: `ScalarValue` <br/>
 - **q3:** Third Quartile of the dataset <br/>
-  type: `ScalarValue` <br/>
+  type: [`ScalarValue`](../500_types/100_scalarValue.md) <br/>
 - **width:** Width of the boxplot <br/>
-  type: `ScalarValue` <br/>
+  type: [`ScalarValue`](../500_types/100_scalarValue.md) <br/>
 - **y:** y location of the boxplot <br/>
-  type: `ScalarValue` <br/>
+  type: [`ScalarValue`](../500_types/100_scalarValue.md) <br/>
 
 ### Optional
 

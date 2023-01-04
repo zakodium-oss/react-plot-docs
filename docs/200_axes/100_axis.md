@@ -53,10 +53,10 @@ Adding two bottom axes in the same plot will throw the following error :<br/>
   <AxisRangeMaxMin/>
 
 - **paddingStart:** added value to range in the beginning of domain<br />
-  type: [`ScalarValue`](../500_types/scalarValue.md)<br/>
+  type: [`ScalarValue`](../500_types/100_scalarValue.md)<br/>
   default: `0`
 - **paddingEnd:** added value to range in the end of domain<br />
-  type: [`ScalarValue`](../500_types/scalarValue.md)<br/>
+  type: [`ScalarValue`](../500_types/100_scalarValue.md)<br/>
   default: `0`
 
   <AxisRangePadding/>

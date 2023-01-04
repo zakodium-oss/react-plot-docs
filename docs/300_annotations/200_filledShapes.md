@@ -19,13 +19,13 @@ import ShapeDemo from './Shape.demo.tsx';
 #### Mandatory
 
 - **x1:** first corner horizontal coordinate<br />
-  type: [`ScalarValue`](../500_types/scalarValue.md)<br/>
+  type: [`ScalarValue`](../500_types/100_scalarValue.md)<br/>
 - **y1:** first corner vertical coordinate<br />
-  type: [`ScalarValue`](../500_types/scalarValue.md)<br/>
+  type: [`ScalarValue`](../500_types/100_scalarValue.md)<br/>
 - **x2:** second corner horizontal coordinate<br />
-  type: [`ScalarValue`](../500_types/scalarValue.md)<br/>
+  type: [`ScalarValue`](../500_types/100_scalarValue.md)<br/>
 - **y2:** second corner vertical coordinate<br />
-  type: [`ScalarValue`](../500_types/scalarValue.md)<br/>
+  type: [`ScalarValue`](../500_types/100_scalarValue.md)<br/>
 
 #### Optional
 
