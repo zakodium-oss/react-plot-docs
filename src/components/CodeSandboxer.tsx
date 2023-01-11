@@ -100,6 +100,7 @@ function useDeploySandbox(props: CodeSandboxerProps) {
         fileName: 'Example.tsx',
       });
       window.open(sandboxUrl);
+      setState({ loading: false, error: '' });
     } catch {
       setState({ error: 'Error', loading: false });
     }
