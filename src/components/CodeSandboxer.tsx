@@ -93,6 +93,7 @@ function useDeploySandbox(props: CodeSandboxerProps) {
           isBinary: true,
         };
       }
+      console.log(files);
       const parameters = getParameters({ files });
 
       const { sandboxUrl } = await sendFilesToCSB(parameters, {
