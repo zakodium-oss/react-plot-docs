@@ -3,12 +3,37 @@ const pkg = require('./package.json');
 const changeCase = require('change-case');
 const babel = require('@babel/core');
 const parser = require('@babel/parser');
+const traverse = require('@babel/traverse');
 
 module.exports = function demoLoader(source) {
   const callback = this.async();
   const parsed = parser.parse(source, {
     sourceType: 'module',
     plugins: ['typescript', 'jsx'],
+  });
+
+  const files = [];
+  traverse.default(parsed, {
+    enter: function (node) {
+      if (node.type === 'CallExpression') {
+        if (node.node.callee.name === 'fetch') {
+          const firstArg = node.node.arguments[0];
+          if (firstArg.type === 'StringLiteral') {
+            if (firstArg.value.startsWith('/')) {
+              files.push(firstArg.value);
+            } else {
+              throw new Error(
+                'fetch should only be used with a path starting with /',
+              );
+            }
+          } else {
+            throw new Error(
+              'fetch should use a string literal as the first argument',
+            );
+          }
+        }
+      }
+    },
   });
 
   const parsedAll = parsed.program.body;
@@ -95,6 +120,7 @@ Example:
                 name="${name}"
                 source={exampleSource}
                 dependencies={${JSON.stringify(codeSandboxDependencies)}}
+                publicFiles={${JSON.stringify(files)}}
               >
                 {() => {
                   return <button type="submit">Open sandbox</button>;
