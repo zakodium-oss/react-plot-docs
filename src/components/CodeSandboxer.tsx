@@ -71,7 +71,6 @@ function useDeploySandbox(props: CodeSandboxerProps) {
       const files = {
         'index.html': {
           content: indexHtmlContent,
-          // isBinary: false,
         },
         'index.tsx': {
           content: indexTsxContent,
@@ -88,9 +87,10 @@ function useDeploySandbox(props: CodeSandboxerProps) {
       };
 
       for (let publicFile of publicFiles) {
+        const data = await fetch(`${origin}${publicFile}`);
+        const text = await data.text();
         files[`public${publicFile}`] = {
-          content: `${origin}${publicFile}`,
-          isBinary: true,
+          content: text,
         };
       }
       console.log(files);
