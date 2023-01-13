@@ -23,8 +23,8 @@ function getPackageJsonContent(
 ) {
   const extendedDependencies = {
     ...dependencies,
-    react: 'latest',
-    'react-dom': 'latest',
+    react: '^17.0.2',
+    'react-dom': '^17.0.2',
   };
   return `
 {
@@ -40,6 +40,7 @@ interface CodeSandboxerProps {
   name: string;
   source: string;
   dependencies: Record<string, string>;
+  publicFiles: string[];
 }
 
 export default function CodeSandboxer(props: CodeSandboxerProps) {
@@ -57,6 +58,7 @@ interface DeployState {
 }
 
 function useDeploySandbox(props: CodeSandboxerProps) {
+  const origin = getUrlOrigin();
   const [state, setState] = useState<DeployState>({
     loading: false,
     error: '',
@@ -65,11 +67,10 @@ function useDeploySandbox(props: CodeSandboxerProps) {
   const onClick = useCallback(async () => {
     setState({ loading: true, error: '' });
     try {
-      const { dependencies, name, source } = props;
+      const { dependencies, name, source, publicFiles = [] } = props;
       const files = {
         'index.html': {
           content: indexHtmlContent,
-          // isBinary: false,
         },
         'index.tsx': {
           content: indexTsxContent,
@@ -84,12 +85,22 @@ function useDeploySandbox(props: CodeSandboxerProps) {
           content: source,
         },
       };
+
+      for (let publicFile of publicFiles) {
+        const data = await fetch(`${origin}${publicFile}`);
+        const text = await data.text();
+        files[`public${publicFile}`] = {
+          content: text,
+        };
+      }
+      console.log(files);
       const parameters = getParameters({ files });
 
       const { sandboxUrl } = await sendFilesToCSB(parameters, {
         fileName: 'Example.tsx',
       });
       window.open(sandboxUrl);
+      setState({ loading: false, error: '' });
     } catch {
       setState({ error: 'Error', loading: false });
     }
@@ -105,6 +116,7 @@ async function sendFilesToCSB(
   let formData = new FormData();
   formData.append('parameters', parameters);
 
+  // https://codesandbox.io/docs/learn/getting-started/your-first-sandbox#define-api
   const response = await fetch(
     'https://codesandbox.io/api/v1/sandboxes/define?json=1',
     {
@@ -135,4 +147,10 @@ function compress(input) {
 }
 function getParameters(files) {
   return compress(JSON.stringify(files));
+}
+
+function getUrlOrigin(): string {
+  if (typeof window === 'undefined') return '';
+  const url = new URL(window.location.href);
+  return url.origin;
 }

@@ -4,4 +4,4 @@ import InfraredDemo from './Infrared.demo.tsx';
 
 Example of code loading and converting a jcamp (using `jcampconverter`)
 
-<InfraredDemo noCodesandbox/>
+<InfraredDemo />
