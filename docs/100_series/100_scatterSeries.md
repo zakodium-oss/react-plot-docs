@@ -12,7 +12,7 @@ import ScatterSeriesLines from './scatterSeries/ScatterSeriesLines.demo.tsx';
 
 ## Data
 
-point type must extend from **[`SeriesPoint`](../500_types/data.md#1-seriespoint)**
+point type must extend from **[`SeriesPoint`](../500_types/000_data.md#1-seriespoint)**
 
 ## Props
 
@@ -20,47 +20,48 @@ Like all other series, scatter series have **[Base props](./000_intro.md/#base-p
 
 ### 1. Markers
 
-- **displayMarkers:** display scatter points markers<br />
-  type: `boolean`<br/>
+- **displayMarkers:** display scatter points markers`<br />`
+  type: `boolean<br/>`
   default: `true`
-- **markerShape:** serie's shape of a marker. Can be either dynamic or static<br />
-  type: `ShapeFuncProps`<br/>
+- **markerShape:** serie's shape of a marker. Can be either dynamic or static`<br />`
+  type: `ShapeFuncProps<br/>`
   default: `'circle'`
-- **markerSize:** serie's size of a marker<br />
-  type: `number`<br/>
+- **markerSize:** serie's size of a marker`<br />`
+  type: `number<br/>`
   default: `8`
-- **markerStyle:** serie's markers style (static / dynamic)<br />
-  type: `CSSFuncProps`<br/>
+- **markerStyle:** serie's markers style (static / dynamic)`<br />`
+  type: `CSSFuncProps<br/>`
   default: `{}`
 
 <ScatterSeriesMarkerDemo/>
 
 ### 2. Point Label
 
-- **pointLabel:** serie's point label (static / dynamic)<br />
-  type: `LabelFuncProps`<br/>
+- **pointLabel:** serie's point label (static / dynamic)`<br />`
+  type: `LabelFuncProps<br/>`
   default: `''`
-- **pointLabelStyle:** serie's point label style (static / dynamic)<br />
-  type: `CSSFuncProps`<br/>
+- **pointLabelStyle:** serie's point label style (static / dynamic)`<br />`
+  type: `CSSFuncProps<br/>`
   default: `{}`
 
 <ScatterSeriesPointLabel/>
 
 ### 3. ErrorBars
 
-- **displayErrorBars:** displays error bars in the serie<br />
-  type: `boolean`<br/>
+- **displayErrorBars:** displays error bars in the serie`<br />`
+  type: `boolean<br/>`
   default: `false`
-- **errorBarsStyle:** changes error bars style<br />
-  type: `SVGAttributes<SVGLineElement>`<br/>
-- **errorBarsCapSize:** size of error bars' cap<br />
-  type: `number`<br/>
-- **errorBarsCapStyle:** changes error bars' cap style<br />
-  type: `SVGAttributes<SVGLineElement>`<br/>
+- **errorBarsStyle:** changes error bars style`<br />`
+  type: `SVGAttributes<SVGLineElement><br/>`
+- **errorBarsCapSize:** size of error bars' cap`<br />`
+  type: `number<br/>`
+- **errorBarsCapStyle:** changes error bars' cap style`<br />`
+  type: `SVGAttributes<SVGLineElement><br/>`
 
 <ScatterSeriesError/>
 
 <!-- ### 4. Lines -->
+
 <!--
   todo: next release
 - **displayLines:** display line between scatter series points<br />

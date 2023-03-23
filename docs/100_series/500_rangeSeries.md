@@ -9,14 +9,14 @@ import RangeSeriesLines from './rangeSeries/RangeSeriesLines.demo.tsx';
 
 ## Data
 
-point type must extend from **[`RangeSeriesPoint`](../500_types/data.md#2-rangeseriespoint)**
+point type must extend from **[`RangeSeriesPoint`](../500_types/000_data.md#2-rangeseriespoint)**
 
 ## Props
 
 Like all other series, range series have **[Base props](./000_intro.md/#base-props)**, and one more additional prop:
 
-- **lineStyle:** style of range serie<br />
-  type: `CSSProperties`<br/>
+- **lineStyle:** style of range serie`<br />`
+  type: `CSSProperties<br/>`
   default: `''`
 
 <RangeSeriesLines/>

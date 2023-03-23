@@ -1,7 +1,7 @@
 import React from 'react';
-import { Axis, Heading, Legend, LineSeries, Plot } from 'react-plot';
+import { Axis, LineSeries, Plot } from 'react-plot';
 
-export default function DrainVoltage() {
+export default function PlotDemo() {
   return (
     <Plot
       width={300}

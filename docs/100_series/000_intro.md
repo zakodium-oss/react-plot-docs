@@ -24,28 +24,28 @@ Base props are the props that all series have:
 #### <u>Mandatory</u>
 
 - **data:** displays serie's data<br/>
-  type: [`Data`](../500_types/data.md)
+  type: [`Data`](../500_types/000_data.md)
 
 #### <u>Optional</u>
 
 - **id:** serie id<br/>
   type: `string`
   default: generated automatically
-- **xAxis:** series horizontal axis id <br />
+- **xAxis:** series horizontal axis id `<br />`
   type: `string`<br/>
   default: `"x"`
-- **yAxis:** series vertical axis id <br />
+- **yAxis:** series vertical axis id `<br />`
   type: `string`<br/>
   default: `"y"`
-- **label:** label of the serie that can be displayed in legends<br />
+- **label:** label of the serie that can be displayed in legends`<br />`
   type: `string`<br/>
-- **hidden:** hides serie<br />
+- **hidden:** hides serie`<br />`
   type: `boolean`<br/>
   default: `false`
-- **xShift:** shifts the data relative to horizontal axis<br />
+- **xShift:** shifts the data relative to horizontal axis`<br />`
   type: `number or string`<br/>
   default: `0`
-- **yShift:** shifts the data relative to vertical axis<br />
+- **yShift:** shifts the data relative to vertical axis`<br />`
   type: `number or string`<br/>
   default: `0`
 

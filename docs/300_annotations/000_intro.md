@@ -27,4 +27,5 @@ There are 3 categories each one may contain many annotations :
   - [Line](./300_otherShapes.md#line)
   - [Arrow](./300_otherShapes.md#arrow)
   - [Polyline](./300_otherShapes.md#line)
-- **[Group](./400_group.md)**
+- [BoxPlot](./400_boxplot.md)
+- [Group](./500_group.md)

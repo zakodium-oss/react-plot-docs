@@ -11,9 +11,9 @@ import TextDemo from './Text.demo.tsx';
 ### Mandatory
 
 - **x:** horizontal coordinate<br />
-  type: [`ScalarValue`](../500_types/scalarValue.md)<br/>
+  type: [`ScalarValue`](../500_types/100_scalarValue.md)<br/>
 - **y:** vertical coordinate<br />
-  type: [`ScalarValue`](../500_types/scalarValue.md)<br/>
+  type: [`ScalarValue`](../500_types/100_scalarValue.md)<br/>
 
 ### Optional
 

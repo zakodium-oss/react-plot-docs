@@ -1,7 +1,7 @@
 import React from 'react';
 import { Axis, LineSeries, Plot } from 'react-plot';
 
-export default function DrainVoltage() {
+export default function PlotMarginDemo() {
   const Explanation = (
     <div>
       <span
